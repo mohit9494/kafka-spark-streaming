@@ -1,0 +1,13 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "batch": {
+        "lotNumber": "lotNumber",
+        "expirationDate": "expirationDate"
+      }
+    }
+  }
+]

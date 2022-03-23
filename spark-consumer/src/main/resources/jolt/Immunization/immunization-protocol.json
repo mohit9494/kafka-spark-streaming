@@ -1,0 +1,42 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "Identifier.[&1].identifierCode",
+          "system": "Identifier.[&1].identifierSystem",
+          "value": "Identifier.[&1].identifierValue"
+        }
+      },
+      "protocolApplied": {
+        "*": {
+          "@(2,resourceType)": "[&1].resourceType",
+          "@(2,id)": "[&1].id",
+          "series": "[&1].nameOfVaccineSeries",
+          "authority": {
+            "reference": "[&2].authorityReference",
+            "type": "[&2].authorityType",
+            "display": "[&2].authorityDisplay"
+          },
+          "targetDisease": {
+            "*": {
+              "coding": {
+                "*": {
+                  "system": "[&5].targetDiseaseCodingSystem",
+                  "code": "[&5].targetDiseaseCode"
+                }
+              },
+              "text": "[&3].targetDiseaseDescription"
+            }
+          },
+          "doseNumberPositiveInt": "[&1].doseNumberPositiveInt",
+          "seriesDosesPositiveInt": "[&1].seriesDosesPositiveInt",
+          "doseNumberString": "[&1].doseNumberString",
+          "seriesDosesString": "[&1].seriesDosesString"
+        }
+      }
+    }
+  }
+]

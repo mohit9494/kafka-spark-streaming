@@ -1,0 +1,33 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "content": {
+        "*": {
+          "attachment": {
+            "@(3,resourceType)": "&2.resourceType",
+            "$(2)": "&2.resourceSubType",
+            "contentType": "&2.contentType",
+            "language": "&2.language",
+            "data": "&2.data",
+            "url": "&2.url",
+            "size": "&2.size",
+            "hash": "&2.hash",
+            "title": "&2.title",
+            "creation": "&2.creation",
+            "@(1,format.system)": "&2.formatSystem",
+            "@(1,format.code)": "&2.formatCode",
+            "@(1,format.display)": "&2.formatDisplay"
+          }
+        }
+      }
+    }
+    },
+  {
+    "operation": "shift",
+    "spec": {
+      "*": ""
+    }
+  }
+
+]

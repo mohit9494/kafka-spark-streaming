@@ -1,0 +1,41 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "Identifier.[&1].identifierCode",
+          "system": "Identifier.[&1].identifierSystem",
+          "value": "Identifier.[&1].identifierValue"
+        }
+      },
+      "performer": {
+        "*": {
+          "@(2,resourceType)": "[&1].resourceType",
+          "@(2,id)": "[&1].id",
+          "actor": {
+            "reference": "[&2].performerActorReference",
+            "display": "[&2].performerActorDisplay",
+            "type": "[&2].performerActorType",
+            "identifier": {
+              "*": {
+                "system": "[&4].performerActorIdentifierSystem",
+                "value": "[&4].performerActorIdentifierValue"
+              }
+            }
+          },
+          "function": {
+            "coding": {
+              "*": {
+                "code": "[&4].performerFunctionCode",
+                "display": "[&4].performerFunctionDisplay",
+                "system": "[&4].performerFunctionCodingSystem"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]

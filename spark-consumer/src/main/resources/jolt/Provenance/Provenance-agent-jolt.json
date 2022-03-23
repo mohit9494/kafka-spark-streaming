@@ -1,0 +1,56 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "id": "id",
+      "agent": {
+        "*": {
+          "type": {
+            "coding": {
+              "*": {
+                "system": "agent.[&4].agentTypeCodingSystem",
+                "code": "agent.[&4].agentTypeCodingCode",
+                "display": "agent.[&4].agentTypeCodingDisplay"
+              }
+            },
+            "text": "agent.[&2].agentTypeText"
+          },
+          "role": {
+            "*": {
+              "coding": {
+                "*": {
+                  "code": "agent.[&5].roleCodingCode",
+                  "display": "agent.[&5].roleCodingDisplay",
+                  "system": "agent.[&5].roleCodingSystem"
+                }
+              },
+              "text": "agent.[&3].roleText"
+            }
+          },
+          "who": {
+            "reference": "agent.[&2].agentReference",
+            "type": "agent.[&2].agentType",
+            "identifier": {
+              "*": {
+                "system": "agent.[&4].agentIdentifierSystem",
+                "value": "agent.[&4].agentIdentifierValue"
+              }
+            },
+            "display": "agent.[&2].agentDisplay"
+          },
+          "onBehalfOf": {
+            "reference": "agent.[&2].onBehalfOfReference",
+            "type": "agent.[&2].onBehalfOfType",
+            "identifier": {
+              "*": {
+                "system": "agent.[&4].onBehalfOfIdentifierSystem",
+                "value": "agent.[&4].onBehalfOfIdentifierValue"
+              }
+            },
+            "display": "agent.[&2].onBehalfOfDisplay"
+          }
+        }
+      }
+    }
+  }
+]

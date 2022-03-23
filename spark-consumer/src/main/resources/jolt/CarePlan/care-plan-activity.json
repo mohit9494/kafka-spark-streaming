@@ -1,0 +1,58 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "Identifier.[&1].identifierCode",
+          "system": "Identifier.[&1].identifierSystem",
+          "value": "Identifier.[&1].identifierValue"
+        }
+      },
+      "activity": {
+        "*": {
+          "outcomeCodeableConcept": {
+            "*": {
+              "coding": {
+                "*": {
+                  "system": "OutcomeCodeableConcept.[&3].outcomeCodeableConceptSystem",
+                  "code": "OutcomeCodeableConcept.[&3].outcomeCodeableConceptCode",
+                  "display": "OutcomeCodeableConcept.[&3].outcomeCodeableConceptDisplay"
+                }
+              },
+              "text": "OutcomeCodeableConcept.[&1].outcomeCodeableConceptText"
+            }
+          },
+          "outcomeReference": {
+            "*": {
+              "reference": "OutcomeReference.[&1].outcomeReferenceReference",
+              "display": "OutcomeReference.[&1].outcomeReferenceDisplay",
+              "type": "OutcomeReference.[&1].outcomeReferenceType",
+              "identifier": {
+                "use": "OutcomeReference.[&2].outcomeReferenceIdentifierUse",
+                "code": "OutcomeReference.[&2].outcomeReferenceIdentifierCode",
+                "system": "OutcomeReference.[&2].outcomeReferenceIdentifierSystem",
+                "value": "OutcomeReference.[&2].outcomeReferenceIdentifierValue"
+              }
+            }
+          },
+          "progress": {
+            "*": {
+              "authorReference": {
+                "reference": "Progress.[&2].progressauthorReference",
+                "type": "Progress.[&2].progressauthorReferenceType",
+                "display": "Progress.[&2].progressauthorReferenceDisplay"
+              },
+              "authorString": "Progress.[&1].authorString",
+              "time": "Progress.[&1].annotationDateTime",
+              "text": "Progress.[&1].annotationText"
+            }
+          }
+
+        }
+      }
+    }
+  }
+  ]

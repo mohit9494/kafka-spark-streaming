@@ -1,0 +1,24 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "id": "id",
+      "identifier": {
+        "*": {
+          "system": "identifierSystem",
+          "value": "identifierValue"
+        }
+      },
+      "qualification": {
+        "*": {
+          "identifier": {
+            "*": {
+              "system": "qualificationIdentifierSystem",
+              "value": "qualificationIdentifierValue"
+            }
+          }
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,188 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "Identifier.[&1].identifierCode",
+          "system": "Identifier.[&1].identifierSystem",
+          "value": "Identifier.[&1].identifierValue"
+        }
+      },
+      "instantiatesCanonical": "instantiatesCanonical",
+      "instantiatesUri": "instantiatesUri",
+      "basedOn": {
+        "*": {
+          "reference": "BasedOn.[&1].basedOnReference",
+          "display": "BasedOn.[&1].basedOnDisplay",
+          "type": "BasedOn.[&1].basedOnType",
+          "identifier": {
+            "use": "BasedOn.[&2].basedOnIdentifierUse",
+            "code": "BasedOn.[&2].basedOnIdentifierCode",
+            "system": "BasedOn.[&2].noteAuthorReferenceIdentifierSystem",
+            "value": "BasedOn.[&2].noteAuthorReferenceIdentifierValue"
+          }
+        }
+      },
+      "replaces": {
+        "*": {
+          "reference": "Replaces.[&1].replacesReference",
+          "display": "Replaces.[&1].replacesDisplay",
+          "type": "Replaces.[&1].replacesType",
+          "identifier": {
+            "use": "Replaces.[&2].replacesIdentifierUse",
+            "code": "Replaces.[&2].replacesIdentifierCode",
+            "system": "Replaces.[&2].replacesIdentifierSystem",
+            "value": "Replaces.[&2].replacesIdentifierValue"
+          }
+        }
+      },
+      "partOf": {
+        "*": {
+          "reference": "PartOf.[&1].partOfReference",
+          "display": "PartOf.[&1].partOfDisplay",
+          "type": "PartOf.[&1].partOfType",
+          "identifier": {
+            "use": "PartOf.[&2].partOfIdentifierUse",
+            "code": "PartOf.[&2].partOfIdentifierCode",
+            "system": "PartOf.[&2].partOfIdentifierSystem",
+            "value": "PartOf.[&2].partOfIdentifierValue"
+          }
+        }
+      },
+      "status": "carePlanStatus",
+      "intent": "intent",
+      "category": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(2,text)": "Category.[&1].carePlanCategoryText",
+              "system": "Category.[&1].carePlanCategorySystem",
+              "code": "Category.[&1].carePlanCategoryCode",
+              "display": "Category.[&1].carePlanCategoryDisplay"
+            }
+          }
+        }
+      },
+      "title": "carePlanTitle",
+      "description": "carePlanDescription",
+      "subject": {
+        "reference": "subjectReference",
+        "type": "subjectType",
+        "display": "subjectDisplayName",
+        "identifier": {
+          "code": "subjectIdentifierCode",
+          "system": "subjectIdentifierSystem",
+          "value": "subjectIdentifierValue"
+        }
+      },
+      "encounter": {
+        "reference": "encounterReference",
+        "type": "encounterType",
+        "display": "encounterDisplay",
+        "identifier": {
+          "code": "encounterIdentifierCode",
+          "system": "encounterIdentifierSystem",
+          "value": "encounterIdentifierValue"
+        }
+      },
+      "period": {
+        "start": "carePlanStartDate",
+        "end": "carePlanEndDate"
+      },
+      "created": "carePlanCreatedOn",
+      "author": {
+        "reference": "authorReference",
+        "type": "authorType",
+        "display": "authorDisplay",
+        "identifier": {
+          "code": "authorIdentifierCode",
+          "system": "authorIdentifierSystem",
+          "value": "authorIdentifierValue"
+        }
+      },
+      "contributor": {
+        "*": {
+          "reference": "Contributor.[&1].contributorReference",
+          "display": "Contributor.[&1].contributorDisplay",
+          "type": "Contributor.[&1].contributorType",
+          "identifier": {
+            "use": "Contributor.[&2].contributorIdentifierUse",
+            "code": "Contributor.[&2].contributorIdentifierCode",
+            "system": "Contributor.[&2].contributorIdentifierSystem",
+            "value": "Contributor.[&2].contributorIdentifierValue"
+          }
+        }
+      },
+      "careTeam": {
+        "*": {
+          "reference": "CareTeam.[&1].careTeamReference",
+          "display": "CareTeam.[&1].careTeamDisplay",
+          "type": "CareTeam.[&1].careTeamType",
+          "identifier": {
+            "use": "CareTeam.[&2].careTeamIdentifierUse",
+            "code": "CareTeam.[&2].careTeamIdentifierCode",
+            "system": "CareTeam.[&2].careTeamIdentifierSystem",
+            "value": "CareTeam.[&2].careTeamIdentifierValue"
+          }
+        }
+      },
+      "addresses": {
+        "*": {
+          "reference": "Address.[&1].addressReference",
+          "display": "Address.[&1].addressDisplay",
+          "type": "Address.[&1].addressType",
+          "identifier": {
+            "use": "Address.[&2].addressesIdentifierUse",
+            "code": "Address.[&2].addressesIdentifierCode",
+            "system": "Address.[&2].addressesIdentifierSystem",
+            "value": "Address.[&2].addressesIdentifierValue"
+          }
+        }
+      },
+      "supportingInfo": {
+        "*": {
+          "reference": "SupportingInfo.[&1].supportingInfoReference",
+          "display": "SupportingInfo.[&1].supportingInfoDisplay",
+          "type": "SupportingInfo.[&1].supportingInfoType",
+          "identifier": {
+            "use": "SupportingInfo.[&2].supportingInfoIdentifierUse",
+            "code": "SupportingInfo.[&2].supportingInfoIdentifierCode",
+            "system": "SupportingInfo.[&2].supportingInfoIdentifierSystem",
+            "value": "SupportingInfo.[&2].supportingInfoIdentifierValue"
+          }
+        }
+      },
+      "goal": {
+        "*": {
+          "reference": "Goal.[&1].goalReference",
+          "display": "Goal.[&1].goalDisplay",
+          "type": "Goal.[&1].goalType",
+          "identifier": {
+            "use": "Goal.[&2].goalInfoIdentifierUse",
+            "code": "Goal.[&2].goalInfoIdentifierCode",
+            "system": "Goal.[&2].goalInfoIdentifierSystem",
+            "value": "Goal.[&2].goalInfoIdentifierValue"
+          }
+        }
+      },
+      "note": {
+        "*": {
+          "time": "Notes.[&1].noteTime",
+          "text": "Notes.[&1].noteText",
+          "authorString": "Notes.[&1].noteAuthorString",
+          "authorReference": {
+            "reference": "Notes.[&2].noteAuthorReferenceReference",
+            "display": "Notes.[&2].noteAuthorReferenceDisplay",
+            "type": "Notes.[&2].noteAuthorReferenceType",
+            "identifier": {
+              "system": "Notes.[&3].noteAuthorReferenceIdentifierSystem",
+              "value": "Notes.[&3].noteAuthorReferenceIdentifierValue"
+            }
+          }
+        }
+      }
+    }
+  }]

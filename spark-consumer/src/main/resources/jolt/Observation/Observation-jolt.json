@@ -1,0 +1,241 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "identifierCode",
+          "system": "identifierSystem",
+          "value": "identifierValue"
+        }
+      },
+      "basedOn": {
+        "*": {
+          "reference": "BasedOn.[&1].basedOnReference",
+          "display": "BasedOn.[&1].basedOnDisplay",
+          "type": "BasedOn.[&1].basedOnType",
+          "identifier": {
+            "use": "BasedOn.[&2].basedOnIdentifierUse",
+            "code": "BasedOn.[&2].basedOnIdentifierCode",
+            "system": "BasedOn.[&2].basedOnIdentifierSystem",
+            "value": "BasedOn.[&2].basedOnIdentifierValue"
+          }
+        }
+      },
+      "partOf": {
+        "*": {
+          "reference": "PartOf.[&1].partOfReference",
+          "display": "PartOf.[&1].partOfDisplay",
+          "type": "PartOf.[&1].partOfType",
+          "identifier": {
+            "use": "PartOf.[&2].partOfIdentifierUse",
+            "code": "PartOf.[&2].partOfIdentifierCode",
+            "system": "PartOf.[&2].partOfIdentifierSystem",
+            "value": "PartOf.[&2].partOfIdentifierValue"
+          }
+        }
+      },
+      "status": "observationStatus",
+      "category": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(2,text)": "Category.[&1].categoryCodingText",
+              "code": "Category.[&1].categoryCodingCode",
+              "display": "Category.[&1].categoryCodingDisplay",
+              "system": "Category.[&1].categoryCodingSystem"
+            }
+          }
+        }
+      },
+      "code": {
+        "coding": {
+          "*": {
+            "@(2,text)": "code.[&1].observationCodeText",
+            "system": "code.[&1].observationCodeSystem",
+            "code": "code.[&1].observationCode",
+            "display": "code.[&1].observationCodeDisplay"
+          }
+        }
+      },
+      "subject": {
+        "reference": "subjectReference",
+        "type": "subjectType",
+        "identifier": {
+          "*": {
+            "system": "subjectIdentifierSystem",
+            "value": "subjectIdentifierValue"
+          }
+        },
+        "display": "subjectDisplay"
+      },
+      "focus": {
+        "*": {
+          "reference": "Focus.[&1].focusReference",
+          "display": "Focus.[&1].focusDisplay",
+          "type": "Focus.[&1].focusType",
+          "identifier": {
+            "use": "Focus.[&2].focusIdentifierUse",
+            "code": "Focus.[&2].focusIdentifierCode",
+            "system": "Focus.[&2].focusIdentifierSystem",
+            "value": "Focus.[&2].focusIdentifierValue"
+          }
+        }
+      },
+      "encounter": {
+        "reference": "encounterReference",
+        "type": "encounterType",
+        "identifier": {
+          "*": {
+            "system": "encounterIdentifierSystem",
+            "value": "encounterIdentifierValue"
+          }
+        },
+        "display": "encounterDisplay"
+      },
+      "effectiveDateTime": "effectiveDateTime",
+      "effectivePeriod": {
+        "start": "effectivePeriodStart",
+        "end": "effectivePeriodEnd"
+      },
+      "issued": "observationIssued",
+      "performer": {
+        "*": {
+          "reference": "Performer.[&1].performerReference",
+          "display": "Performer.[&1].performerDisplay",
+          "type": "Performer.[&1].performerType",
+          "identifier": {
+            "use": "Performer.[&2].performerIdentifierUse",
+            "code": "Performer.[&2].performerIdentifierCode",
+            "system": "Performer.[&2].performerIdentifierSystem",
+            "value": "Performer.[&2].performerIdentifierValue"
+          }
+        }
+      },
+      "valueQuantity": {
+        "value": "valueQuantityValue",
+        "unit": "valueQuantityUnit",
+        "system": "valueQuantitySystem",
+        "code": "valueQuantityCode"
+      },
+      "valueCodeableConcept": {
+        "coding": {
+          "*": {
+            "system": "valueCodeableConceptCodingSystem",
+            "code": "valueCodeableConceptCodingCode",
+            "display": "valueCodeableConceptCodingDisplay"
+          }
+        },
+        "text": "valueCodeableConceptText"
+      },
+      "dataAbsentReason": {
+        "coding": {
+          "*": {
+            "@(2,text)": "dataAbsentReason.[&1].dataAbsentReasonText",
+            "system": "dataAbsentReason.[&1].dataAbsentReasonSystem",
+            "code": "dataAbsentReason.[&1].dataAbsentReasonCode",
+            "display": "dataAbsentReason.[&1].dataAbsentReasonDisplay"
+          }
+        }
+      },
+      "interpretation": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(2,text)": "Interpretation.[&1].interpretationCodingText",
+              "code": "Interpretation.[&1].interpretationCodingCode",
+              "display": "Interpretation.[&1].interpretationCodingDisplay",
+              "system": "Interpretation.[&1].interpretationCodingSystem"
+            }
+          }
+        }
+      },
+      "note": {
+        "*": {
+          "time": "Notes.[&1].noteTime",
+          "text": "Notes.[&1].noteText",
+          "authorString": "Notes.[&1].noteAuthorString",
+          "authorReference": {
+            "reference": "Notes.[&2].noteAuthorReferenceReference",
+            "display": "Notes.[&2].noteAuthorReferenceDisplay",
+            "type": "Notes.[&2].noteAuthorReferenceType",
+            "identifier": {
+              "system": "Notes.[&3].noteAuthorReferenceIdentifierSystem",
+              "value": "Notes.[&3].noteAuthorReferenceIdentifierValue"
+            }
+          }
+        }
+      },
+      "bodySite": {
+        "coding": {
+          "*": {
+            "@(2,text)": "bodySite.[&1].bodySiteText",
+            "system": "bodySite.[&1].bodySiteSystem",
+            "code": "bodySite.[&1].bodySiteCode",
+            "display": "bodySite.[&1].bodySiteDisplay"
+          }
+        }
+      },
+      "method": {
+        "coding": {
+          "*": {
+            "@(2,text)": "method.[&1].methodText",
+            "system": "method.[&1].methodCodingSystem",
+            "code": "method.[&1].methodCodingCode",
+            "display": "method.[&1].methodCodingDisplay"
+          }
+        }
+      },
+      "specimen": {
+        "reference": "specimenReference",
+        "type": "specimenType",
+        "identifier": {
+          "*": {
+            "system": "specimenIdentifierSystem",
+            "value": "specimenIdentifierValue"
+          }
+        },
+        "display": "specimenDisplay"
+      },
+      "device": {
+        "reference": "deviceReference",
+        "type": "deviceType",
+        "identifier": {
+          "*": {
+            "system": "deviceIdentifierSystem",
+            "value": "deviceIdentifierValue"
+          }
+        },
+        "display": "deviceDisplay"
+      },
+      "hasMember": {
+        "*": {
+          "reference": "HasMember.[&1].hasMemberReference",
+          "display": "HasMember.[&1].hasMemberDisplay",
+          "type": "HasMember.[&1].hasMemberType",
+          "identifier": {
+            "use": "HasMember.[&2].hasMemberIdentifierUse",
+            "code": "HasMember.[&2].hasMemberIdentifierCode",
+            "system": "HasMember.[&2].hasMemberIdentifierSystem",
+            "value": "HasMember.[&2].hasMemberIdentifierValue"
+          }
+        }
+      },
+      "derivedFrom": {
+        "*": {
+          "reference": "derivedFrom.[&1].derivedFromReference",
+          "display": "derivedFrom.[&1].derivedFromDisplay",
+          "type": "derivedFrom.[&1].derivedFromType",
+          "identifier": {
+            "use": "derivedFrom.[&2].derivedFromIdentifierUse",
+            "code": "derivedFrom.[&2].derivedFromIdentifierCode",
+            "system": "derivedFrom.[&2].derivedFromIdentifierSystem",
+            "value": "derivedFrom.[&2].derivedFromIdentifierValue"
+          }
+        }
+      }
+    }
+  }
+]

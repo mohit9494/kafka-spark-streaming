@@ -1,0 +1,51 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "identifier.[&1].identifierCode",
+          "system": "identifier.[&1].identifierSystem",
+          "value": "identifier.[&1].identifierValue"
+        }
+      },
+      "performer": {
+        "*": {
+          "function": {
+            "coding": {
+              "*": {
+                "system": "performer.[&4].functionCodingSystem",
+                "code": "performer.[&4].functionCodingCode",
+                "display": "performer.[&4].functionCodingDisplay"
+              }
+            },
+            "text": "performer.[&2].functionText"
+          },
+          "actor": {
+            "reference": "performer.[&2].actorReference",
+            "type": "performer.[&2].actorType",
+            "identifier": {
+              "*": {
+                "system": "performer.[&4].actorIdentifierSystem",
+                "value": "performer.[&4].actorIdentifierValue"
+              }
+            },
+            "display": "performer.[&2].actorDisplay"
+          },
+          "onBehalfOf": {
+            "reference": "performer.[&2].onBehalfOfReference",
+            "type": "performer.[&2].onBehalfOfType",
+            "identifier": {
+              "*": {
+                "system": "performer.[&4].onBehalfOfIdentifierSystem",
+                "value": "performer.[&4].onBehalfOfIdentifierValue"
+              }
+            },
+            "display": "performer.[&2].onBehalfOfDisplay"
+          }
+        }
+      }
+    }
+  }
+]

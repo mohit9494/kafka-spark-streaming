@@ -1,0 +1,136 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "identifier": {
+        "system": "identifierSystem",
+        "value": "identifierValue"
+      },
+      "status": "status",
+      "type": {
+        "coding": {
+          "*": {
+            "system": "typeSystem",
+            "code": "typeCode"
+          }
+        }
+      },
+      "subType": {
+        "coding": {
+          "*": {
+            "system": "subTypeSystem",
+            "code": "subTypeCode"
+          }
+        }
+      },
+      "use": "use",
+      "patient": {
+        "reference": "patientReference",
+        "type": "patientType",
+        "identifier": {
+          "*": {
+            "system": "patientIdentifierSystem",
+            "value": "patientIdentifierValue"
+          }
+        },
+        "display": "patientDisplay"
+      },
+      "billablePeriod": {
+        "start": "billablePeriodStart",
+        "end": "billablePeriodEnd"
+      },
+      "created": "created",
+      "insurer": {
+        "reference": "insurerReference",
+        "type": "insurerType",
+        "identifier": {
+          "*": {
+            "system": "insurerIdentifierSystem",
+            "value": "insurerIdentifierValue"
+          }
+        },
+        "display": "insurerDisplay"
+      },
+      "provider": {
+        "reference": "providerReference",
+        "type": "providerType",
+        "identifier": {
+          "*": {
+            "system": "providerIdentifierSystem",
+            "value": "providerIdentifierValue"
+          }
+        },
+        "display": "providerDisplay"
+      },
+      "priority": {
+        "coding": {
+          "*": {
+            "system": "prioritySystem",
+            "code": "priorityCode"
+          }
+        }
+      },
+      "related": {
+        "*": {
+          "claim": {
+            "reference": "relatedClaimReference",
+            "type": "relatedClaimType",
+            "identifier": {
+              "*": {
+                "system": "relatedClaimIdentifierSystem",
+                "value": "relatedClaimIdentifierValue"
+              }
+            },
+            "display": "relatedClaimDisplay"
+          },
+          "relationship": {
+            "coding": {
+              "*": {
+                "system": "relatedRelationshipSystem",
+                "code": "relatedRelationshipCode"
+              }
+            }
+          },
+          "reference": {
+            "system": "relatedReferenceSystem",
+            "value": "relatedReferenceValue"
+          }
+        }
+      },
+      "prescription": {
+        "reference": "prescriptionReference",
+        "type": "prescriptionType",
+        "identifier": {
+          "*": {
+            "system": "prescriptionIdentifierSystem",
+            "value": "prescriptionIdentifierValue"
+          }
+        },
+        "display": "prescriptionDisplay"
+      },
+      "payee": {
+        "party": {
+          "reference": "payeePartyReference",
+          "type": "payeePartyType",
+          "identifier": {
+            "*": {
+              "system": "payeePartyIdentifierSystem",
+              "value": "payeePartyIdentifierValue"
+            }
+          },
+          "display": "payeePartyDisplay"
+        },
+        "type": {
+          "coding": {
+            "*": {
+              "system": "payeeTypeSystem",
+              "code": "payeeTypeCode"
+            }
+          }
+        }
+      }
+    }
+  }
+]

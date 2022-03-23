@@ -1,0 +1,239 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "identifier.[&1].identifierCode",
+          "system": "identifier.[&1].identifierSystem",
+          "value": "identifier.[&1].identifierValue"
+        }
+      },
+      "status": "status",
+      "statusReason": {
+        "coding": {
+          "*": {
+            "@(2,text)": "statusReason.[&1].statusReasonText",
+            "code": "statusReason.[&1].statusReasonCode",
+            "display": "statusReason.[&1].statusReasonDisplay",
+            "definition": "statusReason.[&1].statusReasonDefinition"
+          }
+        }
+
+      },
+      "intent": "intent",
+      "category": {
+        "coding": {
+          "*": {
+            "code": "category.[&1].categoryCode",
+            "display": "category.[&1].categoryDisplay",
+            "definition": "category.[&1].categoryDefinition"
+          }
+        },
+        "text": "categoryText"
+      },
+      "doNotPerform": "doNotPerform",
+      "reportedBoolean": "reportedBoolean",
+      "reportedReference": {
+        "reference": "practitionerRoleReference",
+        "type": "practitionerRoleType",
+        "identifier": {
+          "*": {
+            "system": "practitionerRoleIdentifierSystem",
+            "value": "practitionerRoleIdentifierValue"
+          }
+        },
+        "display": "practitionerRoleDisplay"
+      },
+      "medicationReference": {
+        "reference": "medicationReference",
+        "type": "medicationType",
+        "identifier": {
+          "*": {
+            "system": "medicationIdentifierSystem",
+            "value": "medicationIdentifierValue"
+          }
+        },
+        "display": "medicationDisplay"
+      },
+      "subject": {
+        "reference": "patientReference",
+        "type": "patientType",
+        "identifier": {
+          "*": {
+            "system": "patientIdentifierSystem",
+            "value": "patientIdentifierValue"
+          }
+        },
+        "display": "patientDisplay"
+      },
+      "encounter": {
+        "reference": "encounterReference",
+        "type": "encounterType",
+        "identifier": {
+          "*": {
+            "system": "encounterIdentifierSystem",
+            "value": "encounterIdentifierValue"
+          }
+        },
+        "display": "encounterDisplay"
+      },
+      "supportingInformation": {
+        "*": {
+          "identifier": {
+            "@(1,reference)": "supportingInformation.[&2].groupReference",
+            "@(1,display)": "supportingInformation.[&2].groupDisplay",
+            "@(1,type)": "supportingInformation.[&2].groupType",
+            "system": "supportingInformation.[&2].groupIdentifierSystem",
+            "value": "supportingInformation.[&2].groupIdentifierValue"
+          }
+        }
+      },
+      "authoredOn": "authoredOn",
+      "requester": {
+        "reference": "deviceReference",
+        "type": "deviceType",
+        "identifier": {
+          "*": {
+            "system": "deviceIdentifierSystem",
+            "value": "deviceIdentifierValue"
+          }
+        },
+        "display": "deviceDisplay"
+      },
+      "performer": {
+        "reference": "performerPatientReference",
+        "type": "performerPatientType",
+        "identifier": {
+          "*": {
+            "system": "performerPatientIdentifierSystem",
+            "value": "performerPatientIdentifierValue"
+          }
+        },
+        "display": "performerPatientDisplay"
+      },
+      "performerType": {
+        "coding": {
+          "*": {
+            "system": "performerType.[&1].performerTypeSystem",
+            "code": "performerType.[&1].performerTypeCode",
+            "display": "performerType.[&1].performerTypeDisplay"
+          }
+        }
+      },
+      "recorder": {
+        "reference": "practitionerReference",
+        "type": "practitionerType",
+        "identifier": {
+          "*": {
+            "system": "practitionerIdentifierSystem",
+            "value": "practitionerIdentifierValue"
+          }
+        },
+        "display": "practitionerDisplay"
+      },
+      "reasonCode": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(2,text)": "reasonCode.[&1].reasonCodeText",
+              "system": "reasonCode.[&1].reasonCodeSystem",
+              "code": "reasonCode.[&1].reasonCode",
+              "display": "reasonCode.[&1].reasonCodeDisplay"
+            }
+          }
+        }
+      },
+      "reasonReference": {
+        "*": {
+          "identifier": {
+            "@(1,reference)": "reasonReference.[&2].conditionReference",
+            "@(1,display)": "reasonReference.[&2].conditionDisplay",
+            "@(1,type)": "reasonReference.[&2].conditionType",
+            "system": "reasonReference.[&2].conditionIdentifierSystem",
+            "value": "reasonReference.[&2].conditionIdentifierValue"
+          }
+        }
+      },
+      "basedOn": {
+        "*": {
+          "identifier": {
+            "@(1,reference)": "basedOn.[&2].carePlanReference",
+            "@(1,display)": "basedOn.[&2].carePlanDisplay",
+            "@(1,type)": "basedOn.[&2].carePlanType",
+            "system": "basedOn.[&2].carePlanIdentifierSystem",
+            "value": "basedOn.[&2].carePlanIdentifierValue"
+          }
+        }
+      },
+      "groupIdentifier": {
+        "*": {
+          "system": "encounterGroupIdentifierSystem",
+          "value": "encounterGroupIdentifierValue"
+        }
+      },
+      "courseOfTherapyType": {
+        "coding": {
+          "*": {
+            "@(2,text)": "courseOfTherapyType.[&1].courseOfTherapyTypeText",
+            "code": "courseOfTherapyType.[&1].courseOfTherapyCode",
+            "display": "courseOfTherapyType.[&1].courseOfTherapyDisplay",
+            "system": "courseOfTherapyType.[&1].courseOfTherapyDisplay"
+          }
+        }
+      },
+      "insurance": {
+        "*": {
+          "identifier": {
+            "@(1,reference)": "insurance.[&2].coverageReference",
+            "@(1,display)": "insurance.[&2].coverageDisplay",
+            "@(1,type)": "insurance.[&2].coverageType",
+            "system": "insurance.[&2].coverageIdentifierSystem",
+            "value": "insurance.[&2].coverageIdentifierValue"
+          }
+        }
+      },
+      "note": {
+        "*": {
+          "text": "note.[&1].noteText"
+        }
+      },
+      "priorDescription": {
+        "reference": "medicationRequestReference",
+        "type": "MedicationRequest",
+        "identifier": {
+          "*": {
+            "system": "medicationRequestIdentifierSystem",
+            "value": "medicationRequestIdentifierValue"
+          }
+        },
+        "display": "medicationRequestDisplay"
+      },
+      "detectedIssue": {
+        "*": {
+          "identifier": {
+            "@(1,reference)": "detectedIssue.[&2].detectedIssueReference",
+            "@(1,display)": "detectedIssue.[&2].detectedIssueDisplay",
+            "@(1,type)": "detectedIssue.[&2].detectedIssueType",
+            "system": "detectedIssue.[&2].detectedIssueIdentifierSystem",
+            "value": "detectedIssue.[&2].detectedIssueIdentifierValue"
+          }
+        }
+      },
+      "eventHistory": {
+        "*": {
+          "identifier": {
+            "@(1,reference)": "eventHistory.[&2].provenanceReference",
+            "@(1,display)": "eventHistory.[&2].provenanceDisplay",
+            "@(1,type)": "eventHistory.[&2].provenanceType",
+            "system": "eventHistory.[&2].provenanceIdentifierSystem",
+            "value": "eventHistory.[&2].provenanceIdentifierValue"
+          }
+        }
+      }
+    }
+  }
+
+]

@@ -1,0 +1,220 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "identifierCode",
+          "system": "identifierSystem",
+          "value": "identifierValue"
+        }
+      },
+      "basedOn": {
+        "*": {
+          "identifier": {
+            "@(1,reference)": "BasedOn.[&2].carePlanReferenceReference",
+            "@(1,display)": "BasedOn.[&2].carePlanReferenceDisplay",
+            "@(1,type)": "BasedOn.[&2].carePlanReferenceType",
+            "system": "BasedOn.[&2].carePlanreasonReferenceSystem",
+            "value": "BasedOn.[&2].carePlanReasonReferenceValue"
+          }
+        }
+      },
+      "partOf": {
+        "*": {
+          "identifier": {
+            "@(1,reference)": "partOf.[&2].procedureReference",
+            "@(1,display)": "partOf.[&2].procedureDisplay",
+            "@(1,type)": "partOf.[&2].procedureType",
+            "system": "partOf.[&2].procedureIdentifierSystem",
+            "value": "partOf.[&2].procedureIdentifierValue"
+          }
+        }
+      },
+      "status": "status",
+      "statusReason": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(2,text)": "StatusReason.[&1].statusReasonText",
+              "code": "StatusReason.[&1].statusReasonCode",
+              "display": "StatusReason.[&1].statusReasonDisplay",
+              "system": "StatusReason.[&1].statusReasonSystem"
+            }
+          }
+        }
+      },
+      "category": {
+        "coding": {
+          "*": {
+            "@(2,text)": "category.[&1].categoryText",
+            "system": "category.[&1].categorySystem",
+            "code": "category.[&1].categoryCode",
+            "display": "category.[&1].categoryDisplay"
+          }
+        }
+      },
+      "medicationReference": {
+        "reference": "medicationReference",
+        "type": "medicationType",
+        "identifier": {
+          "*": {
+            "system": "medicationIdentifierSystem",
+            "value": "medicationIdentifierValue"
+          }
+        },
+        "display": "medicationDisplay"
+      },
+      "subject": {
+        "reference": "patientReference",
+        "type": "patientType",
+        "identifier": {
+          "*": {
+            "system": "patientIdentifierSystem",
+            "value": "patientIdentifierValue"
+          }
+        },
+        "display": "patientDisplay"
+      },
+      "context": {
+        "reference": "encounterReference",
+        "type": "Encounter",
+        "identifier": {
+          "*": {
+            "system": "encounterIdentifierSystem",
+            "value": "encounterIdentifierValue"
+          }
+        },
+        "display": "encounterDisplay"
+      },
+      "effectiveDateTime": "effectiveDateTime",
+      "dateAsserted": "dateAsserted",
+      "informationSource": {
+        "reference": "practitionerReference",
+        "type": "practitionerType",
+        "identifier": {
+          "*": {
+            "system": "practitionerIdentifierSystem",
+            "value": "practitionerIdentifierValue"
+          }
+        },
+        "display": "practitionerDisplay"
+      },
+      "derivedFrom": {
+        "*": {
+          "identifier": {
+            "@(1,reference)": "derivedFrom.[&2].practitionerRoleReference",
+            "@(1,display)": "derivedFrom.[&2].practitionerRoleDisplay",
+            "@(1,type)": "derivedFrom.[&2].practitionerRoleType",
+            "system": "derivedFrom.[&2].practitionerRoleIdentifierSystem",
+            "value": "derivedFrom.[&2].practitionerRoleIdentifierValue"
+          }
+        }
+      },
+      "reasonCode": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(2,text)": "reasonCode.[&1].medicationReasonCodeText",
+              "system": "reasonCode.[&1].medicationReasonCodeCodingSystem",
+              "code": "reasonCode.[&1].medicationReasonCodeCodingCode",
+              "display": "reasonCode.[&1].medicationReasonCodeCodingDisplay"
+            }
+          }
+        }
+      },
+      "note": {
+        "*": {
+          "text": "note.[&1].text"
+        }
+      },
+      "dosage": {
+        "*": {
+          "sequence": "dosage.[&1].dosageSequence",
+          "text": "dosage.[&1].dosageWay",
+          "additionalInstruction": {
+            "*": {
+              "text": "dosage.[&3].additionalInstruction"
+            }
+          },
+          "patientInstruction": "dosage.[&1].patientInstruction",
+          "asNeededCodeableConcept": {
+            "coding": {
+              "*": {
+                "system": "dosage.[&4].asNeedCodingSystem",
+                "code": "dosage.[&4].asNeedCode",
+                "display": "dosage.[&4].asNeedDisplay"
+              }
+            },
+            "text": "dosage.[&2].asNeededCodeableConceptText"
+          },
+          "site": {
+            "coding": {
+              "*": {
+                "system": "dosage.[&4].siteCodingSystem",
+                "code": "dosage.[&4].siteCodingCode",
+                "display": "dosage.[&4].siteCodingDisplay"
+              }
+            },
+            "text": "dosage.[&2].siteText"
+          },
+          "route": {
+            "coding": {
+              "*": {
+                "system": "dosage.[&4].routingSystem",
+                "code": "dosage.[&4].routeCode",
+                "display": "dosage.[&4].routingDisplay"
+              }
+            },
+            "text": "dosage.[&2].routeCodingText"
+          },
+          "method": {
+            "coding": {
+              "*": {
+                "system": "dosage.[&4].methodCodingSystem",
+                "code": "dosage.[&4].methodCode",
+                "display": "dosage.[&4].methodDisplay"
+              }
+            },
+            "text": "dosage.[&2].methodText"
+          },
+          "doseAndRate": {
+            "*": {
+              "type": {
+                "coding": {
+                  "system": "dosage.[&5].doseAndRateSystem",
+                  "code": "dosage.[&5].doseAndRateCode",
+                  "display": "dosage.[&5].doseAndRateDisplay"
+                }
+              },
+              "doseRange": {
+                "low": {
+                  "value": "dosage.[&5].doseRangeLowValue",
+                  "unit": "dosage.[&5].doseRangeLowUnit",
+                  "system": "dosage.[&5].doseRangeLowSystem",
+                  "code": "dosage.[&4].doseRangeLowCode"
+                },
+                "high": {
+                  "value": "dosage.[&5].doseRangeHighValue",
+                  "unit": "dosage.[&5].doseRangeHighUnit",
+                  "system": "dosage.[&5].doseRangeHighSystem",
+                  "code": "dosage.[&5].doseRangeHighCode"
+                }
+              }
+            }
+          },
+          "maxDosePerPeriod": "dosage.[&1].maxDosePerPeriod",
+          "maxDosePerAdministration": {
+            "value": "dosage.[&2].maxDoseValue",
+            "unit": "dosage.[&2].maxDoseUnit",
+            "system": "dosage.[&2].maxDoseSystem",
+            "code": "dosage.[&2].maxDoseCode"
+          }
+        }
+      }
+    }
+  }
+
+]

@@ -1,0 +1,185 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "identifier": {
+        "*": {
+          "system": "identifier.[&1].identifierSystem",
+          "value": "identifier.[&1].identifierValue"
+        }
+      },
+      "definition": {
+        "reference": "definitionReference",
+        "type": "deviceType",
+        "identifier": {
+          "system": "IdentifierDeviceSystem",
+          "value": "IdentifierDeviceValue"
+        },
+        "display": "deviceDisplay"
+      },
+      "udiCarrier": {
+        "*": {
+          "deviceIdentifier": "udiCarrier.[&1].deviceIdentifier",
+          "issuer": "udiCarrier.[&1].issuer",
+          "jurisdiction": "udiCarrier.[&1].jurisdiction",
+          "carrierAIDC": "udiCarrier.[&1].carrierAIDC",
+          "carrierHRF": "udiCarrier.[&1].carrierHRF",
+          "entryType": "udiCarrier.[&1].entryType"
+        }
+      },
+      "status": "status",
+      "statusReason": {
+        "*": {
+          "coding": {
+            "*": {
+              "code": "statusReason.[&1].statusReasonCode",
+              "display": "statusReason.[&1].statusReasonDisplay"
+            }
+          }
+        }
+      },
+      "distinctIdentifier": "Distinct Identifier",
+      "manufacturer": "Manufacturer",
+      "manufactureDate": "Manufacture Date",
+      "expirationDate": "Expiratio nDate",
+      "lotNumber": "Lot Number",
+      "serialNumber": "Serial Number",
+      "deviceName": {
+        "*": {
+          "name": "deviceName.[&1].name",
+          "type": "deviceName.[&1].type"
+        }
+      },
+      "modelNumber": "modelNumber",
+      "partNumber": "partNumber",
+      "type": {
+        "coding": {
+          "*": {
+            "system": "Device type valuset",
+            "code": "Device Nametype"
+          }
+        }
+      },
+      "specialization": {
+        "*": {
+          "systemType": {
+            "coding": {
+              "*": {
+                "system": "specialization.[&4].system",
+                "code": "specialization.[&4].code"
+              }
+            }
+          },
+          "version": "specialization.[&1].version"
+        }
+      },
+      "version": {
+        "*": {
+          "type": {
+            "coding": {
+              "*": {
+                "system": "version.[&4].versionTypeSystem",
+                "code": "version.[&4].versionTypeCode"
+              }
+            }
+          },
+          "component": {
+            "system": "version.[&2].componentSystem",
+            "value": "version.[&2].componentValue"
+          },
+          "value": "version.[&1].value"
+        }
+      },
+      "property": {
+        "*": {
+          "type": {
+            "coding": {
+              "*": {
+                "system": "property.[&4].propertySystem",
+                "code": "property.[&4].propertyCode"
+              }
+            }
+          },
+          "valueQuantity": {
+            "*": {
+              "value": "property.[&3].value"
+            }
+          },
+          "valueCode": {
+            "*": {
+              "coding": {
+                "*": {
+                  "system": "property.[&5].valueSystem",
+                  "code": "property.[&5].valueCode"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patient": {
+        "reference": "patientReference",
+        "type": "patientType",
+        "identifier": {
+          "system": "patientIdentifierPatientSystem",
+          "value": "patientIdentifierPatientValue"
+        },
+        "display": "patientDisplay"
+      },
+      "owner": {
+        "reference": "OrganizationReference",
+        "type": "organizationType",
+        "identifier": {
+          "system": "organizationIdentifierOrganizationSystem",
+          "value": "organizationIdentifierOrganizationValue"
+        },
+        "display": "organizationDisplay"
+      },
+      "contact": {
+        "*": {
+          "system": "contact.[&1].system",
+          "value": "contact.[&1].value",
+          "use": "contact.[&1].use"
+        }
+      },
+      "location": {
+        "reference": "locationReference",
+        "type": "Location type",
+        "identifier": {
+          "system": "IdentifierLocationSystem",
+          "value": "IdentifierLocationValue"
+        },
+        "display": "locationDisplay"
+      },
+      "url": "url",
+      "note": {
+        "*": {
+          "authorString": "note.[&1].authorString",
+          "time": "note.[&1].Time",
+          "text": "note.[&1].Text"
+        }
+      },
+      "safety": {
+        "*": {
+          "coding": {
+            "*": {
+              "system": "safety.[&1].system",
+              "code": "safety.[&1].code"
+            }
+          }
+        }
+      },
+      "parent": {
+        "reference": "parentReference",
+        "type": "parentType",
+        "identifier": {
+          "system": "parentIdentifierParentSystem",
+          "value": "parentIdentifierParentValue"
+        },
+        "display": "parentDisplay"
+      }
+    }
+  }
+  ]

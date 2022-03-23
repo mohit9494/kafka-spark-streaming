@@ -1,0 +1,68 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "masterIdentifier": {
+        "system": "masterIdentifierSystem",
+        "value": "masterIdentifierValue"
+      },
+      "status": "status",
+      "docStatus": "docStatus",
+      "type": {
+        "coding": {
+          "*": {
+            "text": "type.[&1].typeText",
+            "system": "type.[&1].typeSystem",
+            "code": "type.[&1].typeCode",
+            "display": "type.[&1].typeDisplay"
+          }
+        }
+      },
+      "subject": {
+        "reference": "subjectReference",
+        "type": "subjectType",
+        "identifier": {
+          "system": "subjectSystem",
+          "value": "subjectValue"
+        },
+        "display": "subjectDisplay"
+      },
+      "date": "date",
+      "authenticator": {
+        "reference": "authenticatorReference",
+        "type": "authenticatorType",
+        "identifier": {
+          "system": "authenticatorSystem",
+          "value": "authenticatorValue"
+        },
+        "display": "authenticatorDisplay"
+      },
+      "custodian": {
+        "reference": "custodianReference",
+        "type": "custodianType",
+        "identifier": {
+          "system": "custodianSystem",
+          "value": "custodianValue"
+        },
+        "display": "custodianDisplay"
+      },
+      "relatesTo": {
+        "*": {
+          "code": "relatesTo.[&1].code",
+          "target": {
+            "reference": "relatesTo.[&2].reference",
+            "type": "relatesTo.[&2].relatesToType",
+            "identifier": {
+              "system": "relatesTo.[&3].identifierSystem",
+              "value": "relatesTo.[&3].identifierValue"
+            },
+            "display": "relatesTo.[&2].display"
+          }
+        }
+      },
+      "description": "description"
+    }
+  }
+]

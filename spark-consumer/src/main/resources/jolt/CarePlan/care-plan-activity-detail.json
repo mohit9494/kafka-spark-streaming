@@ -1,0 +1,169 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "Identifier.[&1].identifierCode",
+          "system": "Identifier.[&1].identifierSystem",
+          "value": "Identifier.[&1].identifierValue"
+        }
+      },
+      "activity": {
+        "*": {
+          "reference": {
+            "reference": "activityDetailsReference",
+            "type": "activityDetailsType",
+            "display": "activityDetailsDisplay",
+            "identifier": {
+              "code": "referenceIdentifierCode",
+              "system": "referenceIdentifierSystem",
+              "value": "referenceIdentifierValue"
+            }
+          },
+          "detail": {
+            "kind": "carePlanActivityKind",
+            "instantiatesCanonical": "instantiatesCanonical",
+            "instantiatesUri": "instantiatesUri",
+            "code": {
+              "coding": {
+                "*": {
+                  "@(2,text)": "Coding.[&1].detailsOfActivity",
+                  "system": "Coding.[&1].activityDetailsCodingSystem",
+                  "display": "Coding.[&1].activityDetailsCodingDisplay",
+                  "value": "Coding.[&1].activityDetailsCodingValue"
+                }
+              }
+            },
+            "reasonCode": {
+              "*": {
+                "coding": {
+                  "*": {
+                    "@(2,text)": "ReasonCodes.[&1].detailsOfActivityReasonCode",
+                    "code": "ReasonCodes.[&1].activityDetailsReasonCodeCodingCode",
+                    "display": "ReasonCodes.[&1].activityDetailsReasonCodeCodingDisplay",
+                    "system": "ReasonCodes.[&1].activityDetailsReasonCodeCodingSystem",
+                    "value": "ReasonCodes.[&1].activityDetailsReasonCodeCodingValue"
+                  }
+                }
+              }
+            },
+            "reasonReference": {
+              "*": {
+                "identifier": {
+                  "@(1,reference)": "ReasonReference.[&2].activityDetailsReasonReference",
+                  "@(1,display)": "ReasonReference.[&2].activityDetailsReasonReferenceDisplay",
+                  "@(1,type)": "ReasonReference.[&2].activityDetailsReasonReferenceType",
+                  "system": "ReasonReference.[&2].reasonReferenceIdentifierSystem",
+                  "value": "ReasonReference.[&2].reasonReferenceIdentifierValue"
+                }
+              }
+            },
+            "goal": {
+              "*": {
+                "reference": "Goal.[&1].activityDetailsGoalReference",
+                "display": "Goal.[&1].activityDetailsGoalDisplay",
+                "type": "Goal.[&1].activityDetailsGoalType",
+                "identifier": {
+                  "use": "Goal.[&2].goalIdentifierUse",
+                  "code": "Goal.[&2].goalIdentifierCode",
+                  "system": "Goal.[&2].goalIdentifierSystem",
+                  "value": "Goal.[&2].goalIdentifierValue"
+                }
+              }
+            },
+            "statusReason": {
+              "coding": {
+                "*": {
+                  "@(2,text)": "StatusReason.[&1].activityDetailsStatusReasonText",
+                  "code": "StatusReason.[&1].activityDetailsStatusReasonCodingCode",
+                  "display": "StatusReason.[&1].activityDetailsStatusReasonCodingDisplay",
+                  "system": "StatusReason.[&1].activityDetailsStatusReasonCodingSystem",
+                  "value": "StatusReason.[&1].activityDetailsStatusReasonCodeCodingValue"
+                }
+              }
+            },
+            "doNotPerform": "doNotPerform",
+            "scheduledTiming": {
+              "event": "activityDetailsScheduledTimingEvent",
+              "repeat": {
+                "boundsDuration": "activityDetailsScheduledTimingEventBoundsDuration",
+                "count": "activityDetailsScheduledTimingEventCount",
+                "countMax": "activityDetailsScheduledTimingEventMaxCount",
+                "duration": "activityDetailsScheduledTimingDuration",
+                "durationMax": "activityDetailsScheduledTimingDurationMax",
+                "durationUnit": "activityDetailsScheduledTimingDurationUnit",
+                "frequency": "activityDetailsScheduledTimingFrequency",
+                "frequencyMax": "activityDetailsScheduledTimingFrequencyMax",
+                "period": "activityDetailsScheduledTimingPeriod",
+                "periodUnit": "activityDetailsScheduledTimingPeriodUnit",
+                "periodMax": "activityDetailsScheduledTimingPeriodMax",
+                "dayOfWeek": "activityDetailsScheduledTimingDayOfWeek",
+                "timeOfDay": "activityDetailsScheduledTimingTimeOfDay",
+                "when": "activityDetailsScheduledTimingTimePeriod"
+              }
+            },
+            "scheduledPeriod": {
+              "start": "activityDetailsScheduledStart",
+              "end": "activityDetailsScheduledEnd"
+            },
+            "scheduledString": "activityDetailsScheduledString",
+            "location": {
+              "reference": "activityDetailsLocationReference",
+              "type": "activityDetailsLocationType",
+              "display": "activityDetailsLocationDisplay",
+              "identifier": {
+                "code": "locationIdentifierCode",
+                "system": "locationIdentifierSystem",
+                "value": "locationIdentifierValue"
+              }
+            },
+            "performer": {
+              "*": {
+                "reference": "Performer.[&1].activityDetailsPerformerReference",
+                "display": "Performer.[&1].activityDetailsPerformerDisplay",
+                "type": "Performer.[&1].activityDetailsPerformerType",
+                "identifier": {
+                  "use": "Performer.[&2].performerIdentifierUse",
+                  "code": "Performer.[&2].performerIdentifierCode",
+                  "system": "Performer.[&2].performerIdentifierSystem",
+                  "value": "Performer.[&2].performerIdentifierValue"
+                }
+              }
+            },
+            "productCodeableConcept": {
+              "coding": {
+                "*": {
+                  "@(2,text)": "ProductCodeableConcept.[&1].activityDetailsproductCodeableConceptText",
+                  "system": "ProductCodeableConcept.[&1].activityDetailsproductCodeableConceptCodingSystem",
+                  "code": "ProductCodeableConcept.[&1].activityDetailsproductCodeableConceptCodingCode",
+                  "display": "ProductCodeableConcept.[&1].activityDetailsproductCodeableConceptCodingDisplay"
+                }
+              }
+            },
+            "productReference": {
+              "reference": "activityDetailsProductReference",
+              "type": "activityDetailsProductReferenceType",
+              "display": "activityDetailsProductReferenceDisplay"
+            },
+            "dailyAmount": {
+              "value": "activityDetailsDailyAmountValue",
+              "unit": "activityDetailsDailyAmountUnit",
+              "system": "activityDetailsDailyAmountSystem",
+              "code": "activityDetailsDailyAmountCode"
+            },
+            "quantity": {
+              "value": "activityDetailsQuantityValue",
+              "unit": "activityDetailsQuantityUnit",
+              "system": "activityDetailsQuantitySystem",
+              "code": "activityDetailsQuantityCode"
+            },
+            "description": "activityDetailDescription"
+          }
+        }
+      }
+    }
+  }
+  ]

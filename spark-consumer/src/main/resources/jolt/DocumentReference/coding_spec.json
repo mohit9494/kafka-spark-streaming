@@ -1,0 +1,50 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "category": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(4,resourceType)": "category.[&1].resourceType",
+              "$(3)": "category[&1].resourceSubType",
+              "@(2,text)": "category.[&1].text",
+              "system": "category.[&1].system",
+              "code": "category.[&1].code",
+              "display": "category.[&1].display",
+              "version": "category[&1].version",
+              "userSelected": "category[&1].userSelected"
+            }
+          }
+        }
+      },
+      "securityLabel": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(4,resourceType)": "securityLabel.[&1].resourceType",
+              "$(3)": "securityLabel[&1].resourceSubType",
+              "@(2,text)": "securityLabel.[&1].text",
+              "system": "securityLabel.[&1].system",
+              "code": "securityLabel.[&1].code",
+              "display": "securityLabel.[&1].display",
+              "version": "category[&1].version",
+              "userSelected": "category[&1].userSelected"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "operation": "shift",
+    "spec": {
+      "category": {
+        "*": ""
+      },
+      "securityLabel": {
+        "*": ""
+      }
+    }
+  }
+]

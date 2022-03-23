@@ -1,0 +1,107 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "identifier": {
+        "*": {
+          "system": "identifier.[&1].identifierSystem",
+          "value": "identifier.[&1].identifierValue"
+        }
+      },
+      "status": "status",
+      "type": {
+        "coding": {
+          "*": {
+            "@(2,text)": "type.[&1].text",
+            "system": "type.[&1].system",
+            "code": "type.[&1].code"
+          }
+        }
+      },
+      "subType": {
+        "coding": {
+          "*": {
+            "@(2,text)": "subType.[&1].text",
+            "system": "subType.[&1].system",
+            "code": "subType.[&1].code"
+          }
+        }
+      },
+      "use": "use",
+      "patient": {
+        "reference": "patientReference",
+        "type": "patientType",
+        "identifier": {
+          "system": "patientIdentifierSystem",
+          "value": "patientIdentifierValue"
+        },
+        "display": "patientDisplay"
+      },
+      "billablePeriod": {
+        "start": "billablePeriodStart",
+        "end": "billablePeriodEnd"
+      },
+      "created": "created",
+      "enterer": {
+        "reference": "practitionerRoleEntererReference",
+        "type": "practitionerRoleEntererType",
+        "identifier": {
+          "system": "practitionerRoleEntererIdentifierSystem",
+          "value": "practitionerRoleEntererIdentifierValue"
+        },
+        "display": "practitionerRoleEntererDisplay"
+      },
+      "insurer": {
+        "reference": "organizationInsurerReference",
+        "type": "organizationInsurerType",
+        "identifier": {
+          "system": "organizationInsurerIdentifierSystem",
+          "value": "organizationInsurerIdentifierValue"
+        },
+        "display": "organizationInsurerDisplay"
+      },
+      "provider": {
+        "reference": "practitionerProviderReference",
+        "type": "practitionerProviderType",
+        "identifier": {
+          "system": "practitionerProviderIdentifierSystem",
+          "value": "practitionerProviderIdentifierValue"
+        },
+        "display": "practitionerProviderDisplay"
+      },
+      "priority": {
+        "coding": {
+          "*": {
+            "@(2,text)": "priority.[&1].text",
+            "system": "priority.[&1].system",
+            "code": "priority.[&1].code"
+          }
+        }
+      },
+      "fundsReserve": {
+        "coding": {
+          "*": {
+            "@(2,text)": "fundsReserve.[&1].text",
+            "system": "fundsReserve.[&1].system",
+            "code": "fundsReserve.[&1].code"
+          }
+        }
+      },
+      "related": {
+        "*": {
+          "claim": {
+            "identifier": {
+              "@(1,reference)": "related.[&3].claimRelatedReference",
+              "@(1,display)": "related.[&3].claimRelatedDisplay",
+              "@(1,type)": "related.[&3].claimRelatedType",
+              "system": "related.[&3].claimRelatedSystem",
+              "value": "related.[&3].claimRelatedIdentifierValue"
+            }
+          }
+        }
+      }
+    }
+  }
+]

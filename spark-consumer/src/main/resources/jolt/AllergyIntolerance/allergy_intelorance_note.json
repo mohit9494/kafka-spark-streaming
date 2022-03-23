@@ -1,0 +1,22 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "note": {
+        "*": {
+          "time": "note.[&1].noteTime",
+          "text": "note.[&1].noteText",
+          "authorString": "note.[&1].noteAuthorString",
+          "authorReference": {
+            "reference": "note.[&2].noteAuthorReferenceReference",
+            "display": "note.[&2].noteAuthorReferenceDisplay",
+            "type": "note.[&2].noteAuthorReferenceType",
+            "identifier": {
+              "system": "note.[&3].noteAuthorReferenceIdentifierSystem",
+              "value": "note.[&3].noteAuthorReferenceIdentifierValue"
+            }
+          }
+        }
+      }
+    }
+  }]

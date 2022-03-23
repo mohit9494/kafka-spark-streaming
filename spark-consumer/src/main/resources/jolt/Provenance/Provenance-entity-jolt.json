@@ -1,0 +1,24 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "id": "id",
+      "entity": {
+        "*": {
+          "role": "entity.[&1].entityRole",
+          "what": {
+            "reference": "entity.[&2].entityReference",
+            "type": "entity.[&2].entityType",
+            "identifier": {
+              "*": {
+                "system": "entity.[&4].entityIdentifierSystem",
+                "value": "entity.[&4].entityIdentifierValue"
+              }
+            },
+            "display": "entity.[&2].entityDisplay"
+          }
+        }
+      }
+    }
+  }
+]

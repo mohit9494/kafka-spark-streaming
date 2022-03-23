@@ -1,0 +1,106 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "context": {
+        "period": {
+          "start": "periodStartDate",
+          "end": "periodEndDate"
+        },
+        "sourcePatientInfo": {
+          "reference": "sourcePatientInfoReference",
+          "type": "sourcePatientInfoType",
+          "identifier": {
+            "system": "sourcePatientInfoSystem",
+            "value": "sourcePatientInfoValue"
+          },
+          "display": "sourcePatientInfoDisplay"
+        },
+        "encounter": {
+          "*": {
+            "identifier": {
+              "@(1,reference)": "context.[&2].encounterReference",
+              "@(1,display)": "context.[&2].encounterDisplay",
+              "@(1,type)": "context.[&2].encounterType",
+              "system": "context.[&2].encounterSystem",
+              "value": "context.[&2].encounterValue"
+            }
+          }
+        },
+        "event": {
+          "*": {
+            "coding": {
+              "*": {
+                "@(2,text)": "context.[&1].eventText",
+                "system": "context.[&1].eventSystem",
+                "code": "context.[&1].eventCode",
+                "display": "context.[&1].eventDisplay"
+              }
+            }
+          }
+        },
+        "facilityType": {
+          "coding": {
+            "*": {
+              "@(2,text)": "context.[&1].facilityTypeText",
+              "system": "context.[&1].facilityTypeSystem",
+              "code": "context.[&1].facilityTypeCode",
+              "display": "context.[&1].facilityTypeDisplay"
+            }
+          },
+          "text": "facilityTypeText"
+        },
+        "practiceSetting": {
+          "coding": {
+            "*": {
+              "@(2,text)": "context.[&1].practiceSettingText",
+              "system": "context.[&1].practiceSettingSystem",
+              "code": "context.[&1].practiceSettingCode",
+              "display": "context.[&1].practiceSettingDisplay"
+            }
+          }
+        },
+        "related": {
+          "*": {
+            "identifier": {
+              "@(1,reference)": "context.[&2].Reference",
+              "@(1,display)": "context.[&2].Display",
+              "@(1,type)": "context.[&2].Type",
+              "system": "context.[&2].System",
+              "value": "context.[&2].Value"
+            }
+          }
+        }
+      }
+    }
+    },
+  {
+    "operation": "shift",
+    "spec": {
+      "context": {
+        "*": {
+          "*": "context[&1].&",
+          "@(2,resourceType)": "context[&1].resourceType",
+          "@(2,periodStartDate)": "context[&1].periodStartDate",
+          "@(2,periodEndDate)": "context[&1].periodEndDate",
+          "@(2,sourcePatientInfoReference)": "context[&1].sourcePatientInfoReference",
+          "@(2,sourcePatientInfoType)": "context[&1].sourcePatientInfoType",
+          "@(2,sourcePatientInfoSystem)": "context[&1].sourcePatientInfoSystem",
+          "@(2,sourcePatientInfoValue)": "context[&1].sourcePatientInfoValue",
+          "@(2,sourcePatientInfoDisplay)": "context[&1].sourcePatientInfoDisplay"
+        }
+      }
+    }
+  },
+  {
+    "operation": "shift",
+    "spec": {
+      "context": {
+        "*": ""
+      }
+    }
+  }
+
+
+]

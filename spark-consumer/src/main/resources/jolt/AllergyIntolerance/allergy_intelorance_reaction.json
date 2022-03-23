@@ -1,0 +1,76 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "Identifier.[&1].identifierCode",
+          "system": "Identifier.[&1].identifierSystem",
+          "value": "Identifier.[&1].identifierValue"
+        }
+      },
+      "reaction": {
+        "*": {
+          "substance": {
+            "coding": {
+              "*": {
+                "system": "substance.[&4].substanceCodingSystem",
+                "code": "substance.[&4].substanceCodingCode",
+                "display": "substance.[&4].substanceCodingDisplay",
+                "version": "substance.[&4].substanceStatusVersion",
+                "userSelected": "substance.[&4].substanceStatusUserSelected",
+                "@(2,text)": "substance.[&4].codeText"
+              }
+            }
+          },
+          "manifestation": {
+            "*": {
+              "coding": {
+                "*": {
+                  "system": "manifestation.[&5].manifestationCodeableConceptSystem",
+                  "code": "manifestation.[&5].manifestationCodeableConceptCode",
+                  "display": "manifestation.[&5].manifestationCodeableConceptDisplay",
+                  "version": "manifestation.[&5].manifestationStatusVersion",
+                  "userSelected": "manifestation.[&5].manifestationStatusUserSelected",
+                  "@(2,text)": "manifestation.[&5].manifestationCodeableConceptText"
+                }
+              }
+            }
+          },
+          "description": "reaction.[&1].reactionDescription",
+          "onset": "reaction.[&1].reactionOnset",
+          "severity": "reaction.[&1].reactionSeverity",
+          "exposureRoute": {
+            "coding": {
+              "*": {
+                "system": "exposureRoute.[&1].exposureRouteSystem",
+                "code": "exposureRoute.[&1].exposureRouteCode",
+                "display": "exposureRoute.[&1].exposureRouteDisplay",
+                "version": "exposureRoute.[&1].exposureRouteStatusVersion",
+                "userSelected": "exposureRoute.[&1].exposureRouteStatusUserSelected",
+                "@(2,text)": "exposureRoute.[&1].exposureRouteCodeableConceptText"
+              }
+            }
+          },
+          "note": {
+            "*": {
+              "time": "note.[&1].noteTime",
+              "text": "note.[&1].noteText",
+              "authorString": "note.[&1].noteAuthorString",
+              "authorReference": {
+                "reference": "note.[&2].noteAuthorReferenceReference",
+                "display": "note.[&2].noteAuthorReferenceDisplay",
+                "type": "note.[&2].noteAuthorReferenceType",
+                "identifier": {
+                  "system": "note.[&3].noteAuthorReferenceIdentifierSystem",
+                  "value": "note.[&3].noteAuthorReferenceIdentifierValue"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,274 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "identifierCode",
+          "system": "identifierSystem",
+          "value": "identifierValue"
+        }
+      },
+      "instantiatesCanonical": {
+        "*": "instantiatesCanonical"
+      },
+      "instantiatesUri": {
+        "*": "instantiatesUri"
+      },
+      "basedOn": {
+        "*": {
+          "reference": "BasedOn.[&1].basedOnReference",
+          "display": "BasedOn.[&1].basedOnDisplay",
+          "type": "BasedOn.[&1].basedOnType",
+          "identifier": {
+            "use": "BasedOn.[&2].basedOnIdentifierUse",
+            "code": "BasedOn.[&2].basedOnIdentifierCode",
+            "system": "BasedOn.[&2].basedOnIdentifierSystem",
+            "value": "BasedOn.[&2].basedOnIdentifierValue"
+          }
+        }
+      },
+      "partOf": {
+        "*": {
+          "reference": "PartOf.[&1].partOfReference",
+          "display": "PartOf.[&1].partOfDisplay",
+          "type": "PartOf.[&1].partOfType",
+          "identifier": {
+            "use": "PartOf.[&2].partOfIdentifierUse",
+            "code": "PartOf.[&2].partOfIdentifierCode",
+            "system": "PartOf.[&2].partOfIdentifierSystem",
+            "value": "PartOf.[&2].partOfIdentifierValue"
+          }
+        }
+      },
+      "status": "procedureStatus",
+      "statusReason": {
+        "coding": {
+          "*": {
+            "@(2,text)": "statusReason.[&1].statusReasonText",
+            "system": "statusReason.[&1].statusReasonCodingSystem",
+            "code": "statusReason.[&1].statusReasonCodingCode",
+            "display": "statusReason.[&1].statusReasonCodingDisplay"
+          }
+        }
+      },
+      "category": {
+        "coding": {
+          "*": {
+            "@(2,text)": "category.[&1].categoryText",
+            "system": "category.[&1].categoryCodingSystem",
+            "code": "category.[&1].categoryCodingCode",
+            "display": "category.[&1].categoryCodingDisplay"
+          }
+        }
+      },
+      "code": {
+        "coding": {
+          "*": {
+            "@(2,text)": "code.[&1].procedureCodeText",
+            "system": "code.[&1].procedureCodingSystem",
+            "code": "code.[&1].procedureCodingCode",
+            "display": "code.[&1].procedureCodeDisplay"
+          }
+        }
+
+      },
+      "subject": {
+        "reference": "subjectReference",
+        "type": "subjectType",
+        "identifier": {
+          "*": {
+            "system": "subjectIdentifierSystem",
+            "value": "subjectIdentifierValue"
+          }
+        },
+        "display": "subjectDisplay"
+      },
+      "encounter": {
+        "reference": "encounterReference",
+        "type": "encounterType",
+        "identifier": {
+          "*": {
+            "system": "encounterIdentifierSystem",
+            "value": "encounterIdentifierValue"
+          }
+        },
+        "display": "encounterDisplay"
+      },
+      "performedDateTime": "performedDateTime",
+      "recorder": {
+        "reference": "recorderReference",
+        "display": "recorderDisplay",
+        "type": "recorderType",
+        "identifier": {
+          "*": {
+            "system": "recorderIdentifierSystem",
+            "value": "recorderIdentifierValue"
+          }
+        }
+      },
+      "asserter": {
+        "reference": "asserterReference",
+        "display": "asserterDisplay",
+        "type": "asserterType",
+        "identifier": {
+          "*": {
+            "system": "asserterIdentifierSystem",
+            "value": "asserterIdentifierValue"
+          }
+        }
+      },
+      "location": {
+        "reference": "locationReference",
+        "display": "locationDisplay",
+        "type": "locationType",
+        "identifier": {
+          "*": {
+            "system": "locationIdentifierSystem",
+            "value": "locationIdentifierValue"
+          }
+        }
+      },
+      "reasonCode": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(2,text)": "ReasonCode.[&1].reasonCodeText",
+              "code": "ReasonCode.[&1].reasonCodeCodingCode",
+              "display": "ReasonCode.[&1].reasonCodeCodingDisplay",
+              "system": "ReasonCode.[&1].reasonCodeCodingSystem"
+            }
+          }
+        }
+      },
+      "reasonReference": {
+        "*": {
+          "reference": "ReasonReference.[&1].reasonReferenceReference",
+          "display": "ReasonReference.[&1].reasonReferenceDisplay",
+          "type": "ReasonReference.[&1].reasonReferenceType",
+          "identifier": {
+            "use": "ReasonReference.[&2].reasonReferenceIdentifierUse",
+            "code": "ReasonReference.[&2].reasonReferenceIdentifierCode",
+            "system": "ReasonReference.[&2].reasonReferenceIdentifierSystem",
+            "value": "ReasonReference.[&2].reasonReferenceIdentifierValue"
+          }
+        }
+      },
+      "bodySite": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(2,text)": "BodySite.[&1].bodySiteText",
+              "code": "BodySite.[&1].bodySiteCodingCode",
+              "display": "BodySite.[&1].bodySiteCodingDisplay",
+              "system": "BodySite.[&1].bodySiteCodingSystem"
+            }
+          }
+        }
+      },
+      "outcome": {
+        "coding": {
+          "*": {
+            "@(2,text)": "outcome.[&1].outcomeText",
+            "system": "outcome.[&1].outcomeCodingSystem",
+            "code": "outcome.[&1].outcomeCodingCode",
+            "display": "outcome.[&1].outcomeCodingDisplay"
+          }
+        }
+      },
+      "report": {
+        "*": {
+          "reference": "Report.[&1].reportReference",
+          "display": "Report.[&1].reportDisplay",
+          "type": "Report.[&1].reportType",
+          "identifier": {
+            "use": "Report.[&2].reportIdentifierUse",
+            "code": "Report.[&2].reportIdentifierCode",
+            "system": "Report.[&2].reportIdentifierSystem",
+            "value": "Report.[&2].reportIdentifierValue"
+          }
+        }
+      },
+      "complication": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(2,text)": "Complication.[&1].complicationText",
+              "code": "Complication.[&1].complicationCodingCode",
+              "display": "Complication.[&1].complicationCodingDisplay",
+              "system": "Complication.[&1].complicationCodingSystem"
+            }
+          }
+        }
+      },
+      "complicationDetail": {
+        "*": {
+          "reference": "ComplicationDetail.[&1].complicationDetailReference",
+          "display": "ComplicationDetail.[&1].complicationDetailDisplay",
+          "type": "ComplicationDetail.[&1].complicationDetailType",
+          "identifier": {
+            "use": "ComplicationDetail.[&2].complicationDetailIdentifierUse",
+            "code": "ComplicationDetail.[&2].complicationDetailIdentifierCode",
+            "system": "ComplicationDetail.[&2].complicationDetailIdentifierSystem",
+            "value": "ComplicationDetail.[&2].complicationDetailIdentifierValue"
+          }
+        }
+      },
+      "followUp": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(2,text)": "FollowUp.[&1].followUpText",
+              "code": "FollowUp.[&1].followUpCodingCode",
+              "display": "FollowUp.[&1].followUpCodingDisplay",
+              "system": "FollowUp.[&1].followUpCodingSystem"
+            }
+          }
+        }
+      },
+      "note": {
+        "*": {
+          "time": "Notes.[&1].noteTime",
+          "text": "Notes.[&1].noteText",
+          "authorString": "Notes.[&1].noteAuthorString",
+          "authorReference": {
+            "reference": "Notes.[&2].noteAuthorReferenceReference",
+            "display": "Notes.[&2].noteAuthorReferenceDisplay",
+            "type": "Notes.[&2].noteAuthorReferenceType",
+            "identifier": {
+              "system": "Notes.[&3].noteAuthorReferenceIdentifierSystem",
+              "value": "Notes.[&3].noteAuthorReferenceIdentifierValue"
+            }
+          }
+        }
+      },
+      "usedReference": {
+        "*": {
+          "reference": "UsedReference.[&1].usedReferenceReference",
+          "display": "UsedReference.[&1].usedReferenceDisplay",
+          "type": "UsedReference.[&1].usedReferenceType",
+          "identifier": {
+            "use": "UsedReference.[&2].usedReferenceIdentifierUse",
+            "code": "UsedReference.[&2].usedReferenceIdentifierCode",
+            "system": "UsedReference.[&2].usedReferenceIdentifierSystem",
+            "value": "UsedReference.[&2].usedReferenceIdentifierValue"
+          }
+        }
+      },
+      "usedCode": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(2,text)": "UsedCode.[&1].usedCodeText",
+              "code": "UsedCode.[&1].usedCodeCodingCode",
+              "display": "UsedCode.[&1].usedCodeCodingDisplay",
+              "system": "UsedCode.[&1].usedCodeCodingSystem"
+            }
+          }
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "identifier.[&1].identifierCode",
+          "system": "identifier.[&1].identifierSystem",
+          "value": "identifier.[&1].identifierValue"
+        }
+      },
+      "focalDevice": {
+        "*": {
+          "action": {
+            "coding": {
+              "*": {
+                "system": "focalDevice.[&4].actionCodingSystem",
+                "code": "focalDevice.[&4].actionCodingCode",
+                "display": "focalDevice.[&4].actionCodingDisplay"
+              }
+            },
+            "text": "focalDevice.[&2].focalDeviceActionText"
+          },
+          "manipulated": {
+            "reference": "focalDevice.[&2].manipulatedReference",
+            "type": "focalDevice.[&2].manipulatedType",
+            "identifier": {
+              "*": {
+                "system": "focalDevice.[&4].manipulatedIdentifierSystem",
+                "value": "focalDevice.[&4].manipulatedIdentifierValue"
+              }
+            },
+            "display": "focalDevice.[&2].manipulatedDisplay"
+          }
+        }
+      }
+    }
+  }
+]

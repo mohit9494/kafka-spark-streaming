@@ -1,0 +1,88 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "target": {
+        "*": {
+          "reference": "targetReference",
+          "type": "targetType",
+          "identifier": {
+            "*": {
+              "system": "targetIdentifierSystem",
+              "value": "targetIdentifierValue"
+            }
+          },
+          "display": "targetDisplay"
+        }
+      },
+      "occurredPeriod": {
+        "start": "occurredPeriodStart",
+        "end": "occurredPeriodEnd"
+      },
+      "occurredDateTime": "activityDateTime",
+      "recorded": "recordedDateTime",
+      "policy": "policy",
+      "location": {
+        "reference": "locationReference",
+        "type": "locationType",
+        "identifier": {
+          "*": {
+            "system": "locationIdentifierSystem",
+            "value": "locationIdentifierValue"
+          }
+        },
+        "display": "locationDisplay"
+      },
+      "reason": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(2,text)": "Reason.[&1].reasonCodingText",
+              "code": "Reason.[&1].reasonCodingCode",
+              "display": "Reason.[&1].reasonCodingDisplay",
+              "system": "Reason.[&1].reasonCodingSystem"
+            }
+          }
+        }
+      },
+      "activity": {
+        "coding": {
+          "*": {
+            "@(2,text)": "activity.[&1].activityText",
+            "system": "activity.[&1].activitySystem",
+            "code": "activity.[&1].activityCode",
+            "display": "activity.[&1].activityDisplay"
+          }
+        }
+      },
+      "signature": {
+        "*": {
+          "type": {
+            "*": {
+              "code": "SignatureType.[&1].typeCode",
+              "display": "SignatureType.[&1].typeDisplay",
+              "system": "SignatureType.[&1].typeSystem"
+            }
+          },
+          "when": "signatureWhen",
+          "who": {
+            "reference": "signatureReference",
+            "type": "signatureType",
+            "identifier": {
+              "*": {
+                "system": "signatureIdentifierSystem",
+                "value": "signatureIdentifierValue"
+              }
+            },
+            "display": "signatureDisplay"
+          },
+          "targetFormat": "signatureTargetFormat",
+          "sigFormat": "signatureFormat",
+          "data": "signatureData"
+        }
+      }
+    }
+  }
+]

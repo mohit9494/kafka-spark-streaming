@@ -1,0 +1,159 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "Identifier.[&1].identifierCode",
+          "system": "Identifier.[&1].identifierSystem",
+          "value": "Identifier.[&1].identifierValue"
+        }
+      },
+      "basedOn": {
+        "*": {
+          "identifier": {
+            "@(1,reference)": "BasedOn.[&2].basedOnReference",
+            "@(1,display)": "BasedOn.[&2].basedOnDisplay",
+            "@(1,type)": "BasedOn.[&2].basedOnType",
+            "system": "BasedOn.[&2].basedOnIdentifierSystem",
+            "value": "BasedOn.[&2].basedOnIdentifierValue"
+          }
+        }
+      },
+      "status": "diagnosticReportStatus",
+      "category": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(2,text)": "Category.[&1].categoryCodingText",
+              "code": "Category.[&1].categoryCodingCode",
+              "display": "Category.[&1].categoryCodingDisplay",
+              "system": "Category.[&1].categoryCodingSystem"
+            }
+          }
+        }
+      },
+      "code": {
+        "coding": {
+          "*": {
+            "@(2,text)": "code.[&1].codeText",
+            "system": "code.[&1].codeCodingSystem",
+            "code": "code.[&1].codeCodingCode",
+            "display": "code.[&1].codeCodingDisplay"
+          }
+        }
+      },
+      "subject": {
+        "reference": "subjectReference",
+        "type": "subjectType",
+        "identifier": {
+          "*": {
+            "system": "subjectIdentifierSystem",
+            "value": "subjectIdentifierValue"
+          }
+        },
+        "display": "subjectDisplay"
+      },
+      "encounter": {
+        "reference": "encounterReference",
+        "type": "encounterType",
+        "identifier": {
+          "*": {
+            "system": "encounterIdentifierSystem",
+            "value": "encounterIdentifierValue"
+          }
+        },
+        "display": "encounterDisplay"
+      },
+      "effectiveDateTime": "effectiveDateTime",
+      "issued": "diagnosticReportIssued",
+      "performer": {
+        "*": {
+          "reference": "Performer.[&1].performerReference",
+          "display": "Performer.[&1].performerDisplay",
+          "type": "Performer.[&1].performerType",
+          "identifier": {
+            "use": "Performer.[&2].performerIdentifierUse",
+            "code": "Performer.[&2].performerIdentifierCode",
+            "system": "Performer.[&2].performerIdentifierSystem",
+            "value": "Performer.[&2].performerIdentifierValue"
+          }
+        }
+      },
+      "resultsInterpreter": {
+        "*": {
+          "reference": "ResultsInterpreter.[&1].resultsInterpreterReference",
+          "display": "ResultsInterpreter.[&1].resultsInterpreterDisplay",
+          "type": "ResultsInterpreter.[&1].resultsInterpreterType",
+          "identifier": {
+            "use": "ResultsInterpreter.[&2].resultsInterpreterIdentifierUse",
+            "code": "ResultsInterpreter.[&2].resultsInterpreterIdentifierCode",
+            "system": "ResultsInterpreter.[&2].resultsInterpreterIdentifierSystem",
+            "value": "ResultsInterpreter.[&2].resultsInterpreterIdentifierValue"
+          }
+        }
+      },
+      "specimen": {
+        "*": {
+          "reference": "Specimen.[&1].specimenReference",
+          "display": "Specimen.[&1].specimenDisplay",
+          "type": "Specimen.[&1].specimenType",
+          "identifier": {
+            "use": "Specimen.[&2].specimenIdentifierUse",
+            "code": "Specimen.[&2].specimenIdentifierCode",
+            "system": "Specimen.[&2].specimenIdentifierSystem",
+            "value": "Specimen.[&2].specimenIdentifierValue"
+          }
+        }
+      },
+      "result": {
+        "*": {
+          "reference": "Result.[&1].resultReference",
+          "display": "Result.[&1].resultDisplay",
+          "type": "Result.[&1].resultType",
+          "identifier": {
+            "use": "Result.[&2].resultIdentifierUse",
+            "code": "Result.[&2].resultIdentifierCode",
+            "system": "Result.[&2].resultIdentifierSystem",
+            "value": "Result.[&2].resultIdentifierValue"
+          }
+        }
+      },
+      "imagingStudy": {
+        "*": {
+          "reference": "ImagingStudy.[&1].imagingStudyReference",
+          "display": "ImagingStudy.[&1].imagingStudyDisplay",
+          "type": "ImagingStudy.[&1].imagingStudyType",
+          "identifier": {
+            "use": "ImagingStudy.[&2].imagingStudyIdentifierUse",
+            "code": "ImagingStudy.[&2].imagingStudyIdentifierCode",
+            "system": "ImagingStudy.[&2].imagingStudyIdentifierSystem",
+            "value": "ImagingStudy.[&2].imagingStudyIdentifierValue"
+          }
+        }
+      },
+      "conclusion": "diagnosticReportConclusion",
+      "conclusionCode": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(2,text)": "ConclusionCode.[&1].conclusionCodeCodingText",
+              "code": "ConclusionCode.[&1].conclusionCodeCodingCode",
+              "display": "ConclusionCode.[&1].conclusionCodeCodingDisplay",
+              "system": "ConclusionCode.[&1].conclusionCodeCodingSystem"
+            }
+          }
+        }
+      },
+      "presentedForm": {
+        "*": {
+          "contentType": "PresentedForm.[&1].presentedFormContentType",
+          "language": "PresentedForm.[&1].presentedFormLanguage",
+          "data": "PresentedForm.[&1].presentedFormData",
+          "title": "PresentedForm.[&1].presentedFormTitle"
+        }
+      }
+    }
+  }]

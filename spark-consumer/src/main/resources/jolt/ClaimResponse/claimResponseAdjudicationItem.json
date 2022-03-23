@@ -1,0 +1,120 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "identifier.[&1].identifierCode",
+          "system": "identifier.[&1].identifierSystem",
+          "value": "identifier.[&1].identifierValue"
+        }
+      },
+      "addItem": {
+        "*": {
+          "itemSequence": {
+            "*": "addItem.[&2].itemSequence"
+          },
+          "detailSequence": {
+            "*": "addItem.[&2].detailSequence"
+          },
+          "provider": {
+            "*": {
+              "reference": "addItem.[&1].providerReference",
+              "type": "addItem.[&1].providerType",
+              "identifier": {
+                "system": "addItem.[&2].providerIdentifierSystem",
+                "value": "addItem.[&2].providerIdentifierValue"
+              },
+              "display": "addItem.[&1].providerDisplay"
+            }
+          },
+          "productOrService": {
+            "coding": {
+              "*": {
+                "system": "addItem.[&4].productOrServiceSystem",
+                "code": "addItem.[&4].productOrServiceCode",
+                "display": "addItem.[&4].productOrServiceDisplay"
+              }
+            },
+            "text": "addItem.[&2].productOrServiceText"
+          },
+          "modifier": {
+            "*": {
+              "coding": {
+                "*": {
+                  "system": "addItem.[&5].modifierCodingSystem",
+                  "code": "addItem.[&5].modifierCodingCode",
+                  "display": "addItem.[&5].modifierCodingDisplay"
+                }
+              },
+              "text": "addItem.[&3].modifierText"
+            }
+          },
+          "programCode": {
+            "*": {
+              "coding": {
+                "*": {
+                  "system": "addItem.[&5].programCodeCodingSystem",
+                  "code": "addItem.[&5].programCodeCodingCode",
+                  "display": "addItem.[&5].programCodeCodingDisplay"
+                }
+              },
+              "text": "addItem.[&3].programCodeText"
+            }
+          },
+          "servicedDate": "addItem.[&1].servicedDate",
+          "locationReference": {
+            "reference": "addItem.[&2].locationReference",
+            "type": "addItem.[&2].locationReferenceType",
+            "identifier": {
+              "system": "addItem.[&3].locationReferenceIdentifierSystem",
+              "value": "addItem.[&3].locationReferenceIdentifierValue"
+            },
+            "display": "addItem.[&2].locationReferenceDisplay"
+          },
+          "quantity": {
+            "value": "addItem.[&2].quantityValue",
+            "system": "addItem.[&2].quantitySystem",
+            "code": "addItem.[&2].quantityCode"
+          },
+          "unitPrice": {
+            "value": "addItem.[&2].unitPriceValue",
+            "currency": "addItem.[&2].unitPriceCurrency"
+          },
+          "net": {
+            "value": "addItem.[&2].netValue",
+            "currency": "addItem.[&2].netCurrency"
+          },
+          "bodySite": {
+            "coding": {
+              "*": {
+                "system": "addItem.[&4].bodySiteCodingSystem",
+                "code": "addItem.[&4].bodySiteCodingCode",
+                "display": "addItem.[&4].bodySiteCodingDisplay"
+              }
+            },
+            "text": "addItem.[&2].bodySiteText"
+          },
+          "subSite": {
+            "*": {
+              "coding": {
+                "*": {
+                  "system": "addItem.[&5].subSiteCodingSystem",
+                  "code": "addItem.[&5].subSiteCodingCode",
+                  "display": "addItem.[&5].subSiteCodingDisplay"
+                }
+              },
+              "text": "addItem.[&3].subSiteText"
+            }
+          },
+          "noteNumber": {
+            "*": "addItem.[&2].noteNumber"
+          }
+        }
+      }
+    }
+  }
+
+
+]

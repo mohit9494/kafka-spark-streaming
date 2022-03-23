@@ -1,0 +1,66 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "identifier.[&1].identifierCode",
+          "system": "identifier.[&1].identifierSystem",
+          "value": "identifier.[&1].identifierValue"
+        }
+      },
+      "referenceRange": {
+        "*": {
+          "low": {
+            "value": "referenceRange.[&2].referenceRangeLowValue",
+            "unit": "referenceRange.[&2].referenceRangeLowUnit",
+            "system": "referenceRange.[&2].referenceRangeLowSystem",
+            "code": "referenceRange.[&2].referenceRangeLowCode"
+          },
+          "high": {
+            "value": "referenceRange.[&2].referenceRangeHighValue",
+            "unit": "referenceRange.[&2].referenceRangeHighUnit",
+            "system": "referenceRange.[&2].referenceRangeHighSystem",
+            "code": "referenceRange.[&2].referenceRangeHighCode"
+          },
+          "type": {
+            "coding": {
+              "*": {
+                "system": "referenceRange.[&4].typeCodingSystem",
+                "code": "referenceRange.[&4].typeCodingCode",
+                "display": "referenceRange.[&4].typeCodingDisplay"
+              }
+            },
+            "text": "referenceRange.[&2].referenceRangeTypeText"
+          },
+          "appliesTo": {
+            "*": {
+              "coding": {
+                "*": {
+                  "code": "referenceRange.[&5].appliesToCodingCode",
+                  "display": "referenceRange.[&5].appliesToCodingDisplay",
+                  "system": "referenceRange.[&5].appliesToCodingSystem"
+                }
+              },
+              "text": "referenceRange.[&3].appliesToText"
+            }
+          },
+          "age": {
+            "low": {
+              "value": "referenceRange.[&3].ageLowValue",
+              "system": "referenceRange.[&3].ageLowSystem",
+              "code": "referenceRange.[&3].ageLowCode"
+            },
+            "high": {
+              "value": "referenceRange.[&3].ageHighValue",
+              "system": "referenceRange.[&3].ageHighSystem",
+              "code": "referenceRange.[&3].ageHighCode"
+            }
+          },
+          "text": "referenceRange.[&1].referenceRangeText"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "active": "active",
+      "status": "status",
+      "identifier": {
+        "*": {
+          "system": "identifierSystem",
+          "value": "identifierValue"
+        }
+      },
+      "name": {
+        "*": {
+          "use": "use",
+          "text": "text",
+          "family": "family",
+          "given": {
+            "*": {
+              "@(2,given)": "givenName"
+            }
+          },
+          "prefix": {
+            "*": {
+              "@(2,prefix)": "prefixName"
+            }
+          },
+          "suffix": {
+            "*": {
+              "@(2,suffix)": "suffixName"
+            }
+          },
+          "period": {
+            "start": "telecomPeriodStart",
+            "end": "telecomPeriodEnd"
+          }
+        }
+      },
+      "telecom": {
+        "*": {
+          "system": "telecomSystem",
+          "value": "telecomValue",
+          "use": "telecomUse",
+          "rank": "telecomRank",
+          "period": {
+            "start": "telecomPeriodStart",
+            "end": "telecomPeriodEnd"
+          }
+        }
+      },
+      "address": {
+        "*": {
+          "use": "use",
+          "type": "type",
+          "text": "text",
+          "line": {
+            "*": {
+              "@(2,line)": "lineName"
+            }
+          },
+          "city": "city",
+          "district": "district",
+          "state": "state",
+          "postalCode": "postalCode",
+          "country": "country",
+          "period": {
+            "start": "telecomPeriodStart",
+            "end": "telecomPeriodEnd"
+          }
+        }
+      },
+      "gender": "gender",
+      "birthDate": "birthDate",
+      "photo": {
+        "*": {
+          "contentType": "contentType",
+          "language": "language",
+          "data": "data",
+          "url": "url",
+          "size": "size",
+          "hash": "hash",
+          "title": "title",
+          "creation": "creation"
+        }
+      },
+      "communicationCode": {
+        "*": {
+          "coding": {
+            "*": {
+              "system": "communicationCodeStatusSystem",
+              "code": "communicationCodeStatusCode",
+              "version": "communicationCodeStatusVersion",
+              "userSelected": "communicationCodeStatusUserSelected",
+              "display": "communicationCodeStatusDisplay"
+            }
+          },
+          "text": "communicationCodeText"
+        }
+      }
+    }
+  }
+]

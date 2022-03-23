@@ -1,0 +1,196 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "Identifier.[&1].identifierCode",
+          "system": "Identifier.[&1].identifierSystem",
+          "value": "Identifier.[&1].identifierValue"
+        }
+      },
+      "status": "status",
+      "vaccineCode": {
+        "text": "vaccineCodeDescription",
+        "coding": {
+          "*": {
+            "system": "vaccineCodeSystem",
+            "code": "vaccineCodeCode",
+            "display": "vaccineCodeDisplay"
+          }
+        }
+      },
+      "statusReason": {
+        "text": "statusReasonDescription",
+        "coding": {
+          "*": {
+            "system": "statusReasonCodeSystem",
+            "code": "statusReasonCode",
+            "display": "statusReasonDisplay"
+          }
+        }
+      },
+      "patient": {
+        "reference": "patientReference",
+        "display": "patientDisplay",
+        "type": "patientType",
+        "identifier": {
+          "*": {
+            "system": "patientIdentifierSystem",
+            "value": "patientIdentifierValue"
+          }
+        }
+      },
+      "encounter": {
+        "reference": "encounterReference",
+        "display": "encounterReferenceDisplay",
+        "type": "encounterType",
+        "identifier": {
+          "*": {
+            "system": "encounterIdentifierSystem",
+            "value": "encounterIdentifierValue"
+          }
+        }
+      },
+      "occurrenceDateTime": "occurrenceDateTime",
+      "occurrenceString": "occurrenceString",
+      "recorded": "recordedDateTime",
+      "primarySource": "primarySource",
+      "reportOrigin": {
+        "text": "reportOriginDescription",
+        "coding": {
+          "*": {
+            "system": "reportOriginCodeSystem",
+            "code": "reportOriginCode",
+            "display": "reportOriginDisplay"
+          }
+        }
+      },
+      "location": {
+        "reference": "locationReference",
+        "display": "locationDisplay",
+        "type": "locationType",
+        "identifier": {
+          "*": {
+            "system": "locationIdentifierSystem",
+            "value": "locationIdentifierValue"
+          }
+        }
+      },
+      "manufacturer": {
+        "reference": "manufacturerReference",
+        "display": "manufacturerDisplay",
+        "type": "manufacturerType",
+        "identifier": {
+          "*": {
+            "system": "manufacturerIdentifierSystem",
+            "value": "manufacturerIdentifierValue"
+          }
+        }
+      },
+      "lotNumber": "lotNumber",
+      "expirationDate": "expirationDate",
+      "site": {
+        "text": "siteDescription",
+        "coding": {
+          "*": {
+            "system": "siteCodingSystem",
+            "code": "siteCode",
+            "display": "siteDisplay"
+          }
+        }
+      },
+      "route": {
+        "text": "routeDescription",
+        "coding": {
+          "*": {
+            "system": "routeCodingSystem",
+            "code": "routeCode",
+            "display": "routeDisplay"
+          }
+        }
+      },
+      "doseQuantity": {
+        "value": "doseQty",
+        "code": "doseUnit",
+        "system": "doseSystem"
+      },
+      "note": {
+        "*": {
+          "time": "Notes.[&1].noteTime",
+          "text": "Notes.[&1].noteText",
+          "authorString": "Notes.[&1].noteAuthorString",
+          "authorReference": {
+            "reference": "Notes.[&2].noteAuthorReferenceReference",
+            "display": "Notes.[&2].noteAuthorReferenceDisplay",
+            "type": "Notes.[&2].noteAuthorReferenceType",
+            "identifier": {
+              "system": "Notes.[&3].noteAuthorReferenceIdentifierSystem",
+              "value": "Notes.[&3].noteAuthorReferenceIdentifierValue"
+            }
+          }
+        }
+      },
+      "reasonCode": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(2,text)": "ReasonCodes.[&1].reasonForImmunizationDescription",
+              "code": "ReasonCodes.[&1].immunizationReasonCode",
+              "display": "ReasonCodes.[&1].immunizationReason",
+              "system": "ReasonCodes.[&1].immunizationReasonCodingSystem"
+            }
+          }
+        }
+      },
+      "reasonReference": {
+        "*": {
+          "identifier": {
+            "@(1,reference)": "ReasonReference.[&2].reasonReferenceReference",
+            "@(1,display)": "ReasonReference.[&2].reasonReferenceDisplay",
+            "@(1,type)": "ReasonReference.[&2].reasonReferenceType",
+            "system": "ReasonReference.[&2].immunizationreasonReferenceSystem",
+            "value": "ReasonReference.[&2].immunizationReasonReferenceValue"
+          }
+        }
+      },
+      "isSubpotent": "isSubpotent",
+      "subpotentReason": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(2,text)": "SubpotentReasons.[&1].subpotentReason",
+              "code": "SubpotentReasons.[&1].subpotentReasonCode",
+              "display": "SubpotentReasons.[&1].subpotentReasonDisplay",
+              "system": "SubpotentReasons.[&1].subpotentReasonCodingSystem"
+            }
+          }
+        }
+      },
+      "programEligibility": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(2,text)": "ProgramEligibility.[&1].programEligibilityText",
+              "code": "ProgramEligibility.[&1].programEligibilityCode",
+              "display": "ProgramEligibility.[&1].programEligibilityDisplay",
+              "system": "ProgramEligibility.[&1].programEligibilityCodeSystem"
+            }
+          }
+        }
+      },
+      "fundingSource": {
+        "coding": {
+          "*": {
+            "@(2,text)": "FundingSources.[&1].fundingSourceText",
+            "code": "FundingSources.[&1].fundingSourceCode",
+            "display": "FundingSources.[&1].fundingSourceDisplay",
+            "system": "FundingSources.[&1].fundingSourceCodeSystem"
+          }
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "identifier.[&1].identifierCode",
+          "system": "identifier.[&1].identifierSystem",
+          "value": "identifier.[&1].identifierValue"
+        }
+      },
+      "component": {
+        "*": {
+          "code": {
+            "coding": {
+              "*": {
+                "system": "component.[&4].componentCodeCodingSystem",
+                "code": "component.[&4].componentCodeCodingCode",
+                "display": "component.[&4].componentCodeCodingDisplay"
+              }
+            },
+            "text": "component.[&2].componentCodeText"
+          },
+          "valueQuantity": {
+            "value": "component.[&2].valueQuantityValue",
+            "unit": "component.[&2].valueQuantityUnit",
+            "system": "component.[&2].valueQuantitySystem",
+            "code": "component.[&2].valueQuantityCode"
+          },
+          "valueCodeableConcept": {
+            "coding": {
+              "*": {
+                "system": "component.[&4].valueCodeableConceptCodingSystem",
+                "code": "component.[&4].valueCodeableConceptCodingCode",
+                "display": "component.[&4].valueCodeableConceptCodingDisplay"
+              }
+            },
+            "text": "component.[&2].valueCodeableConcepText"
+          },
+          "dataAbsentReason": {
+            "coding": {
+              "*": {
+                "system": "component.[&4].dataAbsentReasonSystem",
+                "code": "component.[&4].dataAbsentReasonCode",
+                "display": "component.[&4].dataAbsentReasonDisplay"
+              }
+            },
+            "text": "component.[&2].dataAbsentReasonText"
+          },
+          "interpretation": {
+            "*": {
+              "coding": {
+                "*": {
+                  "code": "component.[&5].interpretationCodingCode",
+                  "display": "component.[&5].interpretationCodingDisplay",
+                  "system": "component.[&5].interpretationCodingSystem"
+                }
+              },
+              "text": "component.[&3].interpretationText"
+            }
+          }
+        }
+      }
+    }
+  }
+]

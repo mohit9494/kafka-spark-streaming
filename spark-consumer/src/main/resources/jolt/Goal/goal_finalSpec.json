@@ -1,0 +1,125 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "identifier": {
+        "*": {
+          "system": "identifier.[&1].identifierSystem",
+          "value": "identifier.[&1].identifierValue"
+        }
+      },
+      "lifecycleStatus": "lifecycleStatus",
+      "achievementStatus": {
+        "coding": {
+          "*": {
+            "system": "achievementStatusSystem",
+            "code": "achievementStatusCode"
+          }
+        }
+      },
+      "category": {
+        "*": {
+          "coding": {
+            "*": {
+              "code": "category.[&1].categoryCode",
+              "system": "category.[&1].categorySystem"
+            }
+          }
+        }
+      },
+      "priority": {
+        "coding": {
+          "*": {
+            "system": "prioritySystem",
+            "code": "priorityCode",
+            "display": "priorityDisplay"
+          }
+        }
+      },
+      "description": {
+        "coding": {
+          "*": {
+            "system": "descriptionSystem",
+            "code": "descriptionCode",
+            "display": "descriptionDisplay"
+          }
+        }
+      },
+      "subject": {
+        "reference": "patientReference",
+        "type": "patientType",
+        "identifier": {
+          "system": "patientIdentifierSystem",
+          "value": "patientIdentifierValue"
+        },
+        "display": "patientDisplay"
+      },
+      "startDate": "startDate",
+      "target": {
+        "*": {
+          "measure": {
+            "coding": {
+              "*": {
+                "system": "target.[&4].system",
+                "code": "target.[&4].code",
+                "display": "target.[&4].display"
+              }
+            }
+          }
+        }
+      },
+      "statusDate": "statusDate",
+      "statusReason": "statusReason",
+      "expressedBy": {
+        "reference": "patientExpressedByReference",
+        "type": "Patient",
+        "identifier": {
+          "system": "patientExpressedBySystem",
+          "value": "patientExpressedByValue"
+        },
+        "display": "patientExpressedByDisplay"
+      },
+      "addresses": {
+        "*": {
+          "identifier": {
+            "@(1,reference)": "addresses.[&2].conditionReference",
+            "@(1,display)": "addresses.[&2].conditionDisplay",
+            "@(1,type)": "addresses.[&2].conditionType",
+            "system": "addresses.[&2].conditionIdentifierSystem",
+            "value": "addresses.[&2].conditionIdentifierValue"
+          }
+        }
+      },
+      "note": {
+        "*": {
+          "authorString": "note.[&1].authorString",
+          "time": "note.[&1].time",
+          "text": "note.[&1].text"
+        }
+      },
+      "outcomeCode": {
+        "*": {
+          "coding": {
+            "*": {
+              "code": "outcomeCode.[&1].code",
+              "display": "outcomeCode.[&1].display"
+            }
+          }
+        }
+      },
+      "outcomeReference": {
+        "*": {
+          "identifier": {
+            "@(1,reference)": "outcomeReference.[&2].conditionReference",
+            "@(1,display)": "outcomeReference.[&2].conditionDisplay",
+            "@(1,type)": "outcomeReference.[&2].conditionType",
+            "system": "outcomeReference.[&2].conditionIdentifierSystem",
+            "value": "outcomeReference.[&2].conditionIdentifierValue"
+          }
+        }
+      }
+    }
+  }
+]

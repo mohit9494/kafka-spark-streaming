@@ -1,0 +1,30 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "Identifier.[&1].identifierCode",
+          "system": "Identifier.[&1].identifierSystem",
+          "value": "Identifier.[&1].identifierValue"
+        }
+      },
+      "reaction": {
+        "*": {
+          "date": "Reaction.[&1].reactionDate",
+          "reported": "Reaction.[&1].reactionReported",
+          "detail": {
+            "reference": "Reaction.[&2].reactionDetailReference",
+            "display": "Reaction.[&2].reactionDetailDisplay",
+            "type": "Reaction.[&2].reactionDetailType",
+            "identifier": {
+              "system": "Reaction.[&3].reactionDetailIdentifierSystem",
+              "value": "Reaction.[&3].reactionDetailIdentifierValue"
+            }
+          }
+        }
+      }
+    }
+  }
+]

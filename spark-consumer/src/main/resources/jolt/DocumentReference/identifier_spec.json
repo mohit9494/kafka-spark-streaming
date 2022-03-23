@@ -1,0 +1,26 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "identifier": {
+        "*": {
+          "@(3,resourceType)": "identifier[&1].resourceType",
+          "$(1)": "identifier[&1].resourceSubType",
+          "use": "identifier.[&1].identifierUse",
+          "system": "identifier.[&1].identifierSystem",
+          "value": "identifier.[&1].identifierValue"
+        }
+      }
+    }
+  },
+  {
+    "operation": "shift",
+    "spec": {
+      "identifier": {
+        "*": ""
+      }
+    }
+  }
+]

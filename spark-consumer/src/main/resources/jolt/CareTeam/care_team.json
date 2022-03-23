@@ -1,0 +1,131 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "status": "status",
+      "identifier": {
+        "*": {
+          "system": "identifierSystem",
+          "value": "identifierValue"
+        }
+      },
+      "category": {
+        "*": {
+          "coding": {
+            "*": {
+              "system": "categoryCodingSystem",
+              "code": "categoryCodingCode",
+              "version": "categoryCodingVersion",
+              "userSelected": "categoryCodingUserSelected",
+              "display": "categoryCodingDisplay"
+            }
+          },
+          "text": "categoryText"
+        }
+      },
+      "name": "name",
+      "subject": {
+        "reference": "subjectReference",
+        "type": "subjectType",
+        "identifier": {
+          "*": {
+            "system": "subjectIdentifierSystem",
+            "value": "subjectIdentifierValue"
+          }
+        },
+        "display": "subjectDisplay"
+      },
+      "encounter": {
+        "reference": "encounterReference",
+        "type": "encounterType",
+        "identifier": {
+          "*": {
+            "system": "encounterIdentifierSystem",
+            "value": "encounterIdentifierValue"
+          }
+        },
+        "display": "encounterDisplay"
+      },
+      "period": {
+        "start": "periodStart",
+        "end": "periodEnd"
+      },
+      "reasonCode": {
+        "*": {
+          "coding": {
+            "*": {
+              "system": "reasonCodeStatusSystem",
+              "code": "reasonCodeStatusCode",
+              "version": "reasonCodeStatusVersion",
+              "userSelected": "reasonCodeStatusUserSelected",
+              "display": "reasonCodeStatusDisplay"
+            }
+          },
+          "text": "reasonCodeText"
+        }
+      },
+      "reasonReference": {
+        "*": {
+          "reference": "reasonReferenceReference",
+          "type": "reasonReferenceType",
+          "identifier": {
+            "*": {
+              "system": "reasonReferenceIdentifierSystem",
+              "value": "reasonReferenceIdentifierValue"
+            }
+          },
+          "display": "reasonReferenceDisplay"
+        }
+      },
+      "managingOrganization": {
+        "*": {
+          "reference": "managingOrganizationReference",
+          "type": "managingOrganizationType",
+          "identifier": {
+            "*": {
+              "system": "managingOrganizationIdentifierSystem",
+              "value": "managingOrganizationIdentifierValue"
+            }
+          },
+          "display": "managingOrganizationDisplay"
+        }
+      },
+      "telecom": {
+        "*": {
+          "system": "telecomSystem",
+          "value": "telecomValue",
+          "use": "telecomUse",
+          "rank": "telecomRank",
+          "period": {
+            "start": "telecomPeriodStart",
+            "end": "telecomPeriodEnd"
+          }
+        }
+      },
+      "note": {
+        "*": {
+          "authorReference": {
+            "reference": "authorReferenceReference",
+            "type": "authorReferenceType",
+            "identifier": {
+              "*": {
+                "system": "authorReferenceIdentifierSystem",
+                "value": "authorReferenceIdentifierValue"
+              }
+            },
+            "display": "authorReferenceDisplay"
+          },
+          "authorString": "authorString",
+          "time": {
+            "start": "noteTimeStart",
+            "end": "noteTimeEnd"
+          },
+          "text": "authorText"
+        }
+      }
+    }
+  }
+
+]

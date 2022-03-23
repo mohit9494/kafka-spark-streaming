@@ -1,0 +1,21 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "ingredient": {
+        "*": {
+          "itemCodeableConcept": {
+            "coding": {
+              "code": "ingredient.[&3].itemCode",
+              "display": "ingredient.[&3].itemValue"
+            }
+          },
+          "isActive": "ingredient.[&1].isActive",
+          "strength": "ingredient.[&1].strength"
+        }
+      }
+    }
+  }
+]

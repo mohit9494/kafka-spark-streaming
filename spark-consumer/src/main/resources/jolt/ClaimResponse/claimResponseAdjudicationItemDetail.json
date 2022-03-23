@@ -1,0 +1,125 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "identifier.[&1].identifierCode",
+          "system": "identifier.[&1].identifierSystem",
+          "value": "identifier.[&1].identifierValue"
+        }
+      },
+      "addItem": {
+        "*": {
+          "detail": {
+            "*": {
+              "productOrService": {
+                "coding": {
+                  "*": {
+                    "@(2,text)": "productOrService.[&1].productOrServiceText",
+                    "system": "productOrService.[&1].detailProductOrServiceSystem",
+                    "code": "productOrService.[&1].detailProductOrServiceCode",
+                    "display": "productOrService.[&1].detailProductOrServiceDisplay"
+                  }
+                }
+              },
+              "modifier": {
+                "*": {
+                  "coding": {
+                    "*": {
+                      "system": "modifier.[&3].detailModifierCodingSystem",
+                      "code": "modifier.[&3].detailModifierCodingCode",
+                      "display": "modifier.[&3].detailModifierCodingDisplay"
+                    }
+                  },
+                  "text": "modifier.[&1].detailModifierText"
+                }
+              },
+              "quantity": {
+                "value": "detailQuantityValue",
+                "system": "detailQuantitySystem",
+                "code": "detailQuantityCode"
+              },
+              "unitPrice": {
+                "value": "detailUnitPriceValue",
+                "currency": "detailUnitPriceCurrency"
+              },
+              "net": {
+                "value": "detailNetValue",
+                "currency": "detailNetCurrency"
+              },
+              "adjudication": {
+                "*": {
+                  "category": {
+                    "coding": {
+                      "*": {
+                        "system": "adjudication.[&4].adjudicationCategoryCodingSystem",
+                        "code": "adjudication.[&4].adjudicationCategoryCodingCode",
+                        "display": "adjudication.[&4].adjudicationCategoryCodingDisplay"
+                      }
+                    },
+                    "text": "adjudication.[&2].adjudicationCategoryText"
+                  },
+                  "reason": {
+                    "coding": {
+                      "*": {
+                        "system": "item.[&4].adjudicationReasonCodingSystem",
+                        "code": "item.[&4].adjudicationReasonCodingCode",
+                        "display": "item.[&4].adjudicationReasonCodingDisplay"
+                      }
+                    },
+                    "text": "item.[&2].adjudicationReasonText"
+                  },
+                  "amount": {
+                    "value": "adjudication.[&2].adjudicationAmountValue",
+                    "currency": "adjudication.[&2].adjudicationAmountCurrency"
+                  },
+                  "value": "adjudication.[&1].itemAdjudicationValue"
+                }
+              },
+              "subDetail": {
+                "*": {
+                  "productOrService": {
+                    "coding": {
+                      "*": {
+                        "@(2,text)": "subDetailProductOrService.[&1].subDetailProductOrServiceText",
+                        "system": "subDetailProductOrService.[&1].subDetailProductOrServiceSystem",
+                        "code": "subDetailProductOrService.[&1].subDetailProductOrServiceCode",
+                        "display": "subDetailProductOrService.[&1].subDetailProductOrServiceDisplay"
+                      }
+                    }
+                  },
+                  "modifier": {
+                    "*": {
+                      "coding": {
+                        "*": {
+                          "system": "subDetailModifier.[&3].subDetailModifierCodingSystem",
+                          "code": "subDetailModifier.[&3].subDetailModifierCodingCode",
+                          "display": "subDetailModifier.[&3].subDetailModifierCodingDisplay"
+                        }
+                      },
+                      "text": "subDetailModifier.[&1].subDetailModifierText"
+                    }
+                  },
+                  "quantity": {
+                    "value": "subDetailQuantityValue",
+                    "system": "subDetailQuantitySystem",
+                    "code": "subDetailQuantityCode"
+                  },
+                  "unitPrice": {
+                    "value": "subDetailUnitPriceValue",
+                    "currency": "subDetailUnitPriceCurrency"
+                  },
+                  "net": {
+                    "value": "subDetailNetValue",
+                    "currency": "subDetailNetCurrency"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }]

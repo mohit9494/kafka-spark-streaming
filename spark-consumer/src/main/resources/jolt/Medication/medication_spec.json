@@ -1,0 +1,43 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "identifier": {
+        "*": {
+          "system": "identifier.[&1].identifierSystem",
+          "value": "identifier.[&1].identifierValue"
+        }
+      },
+      "code": {
+        "coding": {
+          "*": {
+            "code": "code",
+            "display": "display"
+          }
+        }
+      },
+      "status": "status",
+      "manufacturer": {
+        "reference": "organizationReference",
+        "type": "organizationType",
+        "identifier": {
+          "*": {
+            "system": "orgIdentifierSystem",
+            "value": "orgIdentifierValue"
+          }
+        },
+        "display": "orgDisplay"
+      },
+      "form": {
+        "coding": {
+          "*": {
+            "code": "formCode",
+            "display": "formDisplay"
+          }
+        }
+      }
+    }
+  }
+]

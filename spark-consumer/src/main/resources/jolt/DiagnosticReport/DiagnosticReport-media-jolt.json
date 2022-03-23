@@ -1,0 +1,31 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "identifier.[&1].identifierCode",
+          "system": "identifier.[&1].identifierSystem",
+          "value": "identifier.[&1].identifierValue"
+        }
+      },
+      "media": {
+        "*": {
+          "comment": "media.[&1].mediaComment",
+          "link": {
+            "reference": "media.[&2].linkReference",
+            "display": "media.[&2].linkDisplay",
+            "type": "media.[&2].linkType",
+            "identifier": {
+              "*": {
+                "system": "media.[&4].linkIdentifierSystem",
+                "value": "media.[&4].linkIdentifierValue"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]

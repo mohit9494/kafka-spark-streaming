@@ -1,0 +1,28 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "author": {
+        "*": {
+          "identifier": {
+            "@(3,resourceType)": "author[&2].resourceType",
+            "$(2)": "author[&2].resourceSubType",
+            "@(1,reference)": "author.[&2].reference",
+            "@(1,display)": "author.[&2].display",
+            "@(1,type)": "author.[&2].type",
+            "system": "author.[&2].identifierSystem",
+            "value": "author.[&2].identifierValue"
+          }
+        }
+      }
+    }
+  },
+  {
+    "operation": "shift",
+    "spec": {
+      "author": {
+        "*": ""
+      }
+    }
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "name": {
+        "*": {
+          "use": {
+            "official": {
+              "@(2,family)": "family",
+              "@(2,given)": "given"
+            },
+            "maiden": {
+              "@(2,family)": "maidenFamily",
+              "@(2,given)": "maidenGiven"
+            }
+          }
+        }
+      },
+      "gender": "gender",
+      "birthDate": "birthDate",
+      "deceasedBoolean": "deceasedBoolean",
+      "deceasedDateTime": "deceasedDateTime",
+      "address": {
+        "*": {
+          "use": {
+            "home": {
+              "@(2,line)": "homeAddressLine",
+              "@(2,city)": "homeAddressCity",
+              "@(2,district)": "homeAddressDistrict",
+              "@(2,state)": "homeAddressState",
+              "@(2,postalCode)": "homeAddressPostalCode"
+            },
+            "work": {
+              "@(2,line)": "workAddressLine",
+              "@(2,city)": "workAddressCity",
+              "@(2,district)": "workAddressDistrict",
+              "@(2,state)": "workAddressState",
+              "@(2,postalCode)": "workAddressPostalCode"
+            }
+          }
+        }
+      },
+      "managingOrganization": {
+        "reference": "managingOrganizationReference"
+      }
+    }
+  }
+]

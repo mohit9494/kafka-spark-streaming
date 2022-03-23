@@ -1,0 +1,86 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "identifier.[&1].identifierCode",
+          "system": "identifier.[&1].identifierSystem",
+          "value": "identifier.[&1].identifierValue"
+        }
+      },
+      "dosageInstruction": {
+        "*": {
+          "sequence": "dosageInstruction.[&1].dosageSequence",
+          "text": "dosageInstruction.[&1].dosageWay",
+          "additionalInstruction": {
+            "*": {
+              "coding": {
+                "*": {
+                  "system": "dosageInstruction.[&5].additionalInformationSystem",
+                  "code": "dosageInstruction.[&5].additionalInformationCode",
+                  "display": "dosageInstruction.[&5].additionalInformationDisplay"
+                }
+              },
+              "text": "dosageInstruction.[&3].additionalInstructionText"
+            }
+          },
+          "patientInstruction": "dosageInstruction.[&1].patientInstruction",
+          "site": {
+            "coding": {
+              "*": {
+                "system": "dosageInstruction.[&4].siteSystem",
+                "code": "dosageInstruction.[&4].siteCode",
+                "display": "dosageInstruction.[&4].siteDisplay"
+              }
+            },
+            "text": "dosageInstruction.[&2].siteText"
+          },
+          "route": {
+            "coding": {
+              "*": {
+                "system": "dosageInstruction.[&4].routingSystem",
+                "code": "dosageInstruction.[&4].routeCode",
+                "display": "dosageInstruction.[&4].routingDisplay"
+              }
+            },
+            "text": "dosageInstruction.[&2].routeDisplay"
+          },
+          "method": {
+            "coding": {
+              "*": {
+                "system": "dosageInstruction.[&4].methodSystem",
+                "code": "dosageInstruction.[&4].methodCode",
+                "display": "dosageInstruction.[&4].methodDisplay"
+              }
+            },
+            "text": "dosageInstruction.[&4].methodDisplay"
+          },
+          "doseAndRate": {
+            "*": {
+              "type": {
+                "coding": {
+                  "*": {
+                    "system": "dosageInstruction.[&6].doseAndRateSystem",
+                    "code": "dosageInstruction.[&6].doseAndRateCode",
+                    "display": "dosageInstruction.[&6].doseAndRateDisplay"
+                  }
+                },
+                "text": "dosageInstruction.[&4].typeDisplay"
+              },
+              "doseQuantity": {
+                "value": "dosageInstruction.[&4].doseQuantityValue",
+                "unit": "dosageInstruction.[&4].doseQuantityUnit",
+                "system": "dosageInstruction.[&4].doseQuantitySystem",
+                "code": "dosageInstruction.[&4].doseQuantityCode"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+]

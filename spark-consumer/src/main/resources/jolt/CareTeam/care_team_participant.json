@@ -1,0 +1,58 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "id": "id",
+      "identifier": {
+        "*": {
+          "system": "identifierSystem",
+          "value": "identifierValue"
+        }
+      },
+      "participant": {
+        "*": {
+          "role": {
+            "*": {
+              "coding": {
+                "*": {
+                  "system": "participant.[&5].roleCodeableConceptSystem",
+                  "code": "participant.[&5].roleCodeableConceptCode",
+                  "display": "participant.[&5].roleCodeableConceptDisplay",
+                  "version": "participant.[&5].roleStatusVersion",
+                  "userSelected": "participant.[&5].roleStatusUserSelected"
+                }
+              },
+              "text": "participant.[&3].roleCodeableConceptText"
+            }
+          },
+          "member": {
+            "reference": "participant.[&2].memberReferenceReference",
+            "display": "participant.[&2].memberReferenceDisplay",
+            "type": "participant.[&2].memberReferenceType",
+            "identifier": {
+              "use": "participant.[&3].memberReferenceIdentifierUse",
+              "code": "participant.[&3].memberReferenceIdentifierCode",
+              "system": "participant.[&3].memberReferenceIdentifierSystem",
+              "value": "participant.[&3].memberReferenceIdentifierValue"
+            }
+          },
+          "onBehalfOf": {
+            "reference": "participant.[&2].onBehalfOfReferenceReference",
+            "display": "participant.[&2].onBehalfOfReferenceDisplay",
+            "type": "participant.[&2].onBehalfOfReferenceType",
+            "identifier": {
+              "use": "participant.[&3].onBehalfOfReferenceIdentifierUse",
+              "code": "participant.[&3].onBehalfOfReferenceIdentifierCode",
+              "system": "participant.[&3].onBehalfOfReferenceIdentifierSystem",
+              "value": "participant.[&3].onBehalfOfReferenceIdentifierValue"
+            }
+          },
+          "period": {
+            "start": "participant.[&2].participantPeriodStart",
+            "end": "participant.[&2].participantPeriodEnd"
+          }
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,225 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "Identifier.[&1].identifierCode",
+          "system": "Identifier.[&1].identifierSystem",
+          "value": "Identifier.[&1].identifierValue"
+        }
+      },
+      "status": "status",
+      "type": {
+        "coding": {
+          "*": {
+            "@(2,text)": "type.[&1].typeText",
+            "system": "type.[&1].typeCodingSystem",
+            "code": "type.[&1].typeCodingCode",
+            "display": "type.[&1].typeCodingDisplay"
+          }
+        }
+      },
+      "subType": {
+        "coding": {
+          "*": {
+            "@(2,text)": "subType.[&1].subTypeText",
+            "system": "subType.[&1].subTypeCodingSystem",
+            "code": "subType.[&1].subTypeCodingCode",
+            "display": "subType.[&1].subTypeCodingDisplay"
+          }
+        }
+      },
+      "use": "use",
+      "patient": {
+        "reference": "patientReference",
+        "type": "patientType",
+        "identifier": {
+          "*": {
+            "system": "patientIdentifierSystem",
+            "value": "patientIdentifierValue"
+          }
+        },
+        "display": "patientDisplay"
+      },
+      "created": "claimResponseCreated",
+      "insurer": {
+        "reference": "insurerReference",
+        "type": "insurerType",
+        "identifier": {
+          "system": "insurerIdentifierSystem",
+          "value": "insurerIdentifierValue"
+        },
+        "display": "insurerDisplay"
+      },
+      "requestor": {
+        "reference": "requestorReference",
+        "type": "requestorType",
+        "identifier": {
+          "*": {
+            "system": "requestorIdentifierSystem",
+            "value": "requestorIdentifierValue"
+          }
+        },
+        "display": "requestorDisplay"
+      },
+      "request": {
+        "reference": "requestReference",
+        "type": "requestType",
+        "identifier": {
+          "system": "requestIdentifierSystem",
+          "value": "requestIdentifierValue"
+        },
+        "display": "requestDisplay"
+      },
+      "outcome": "outcome",
+      "disposition": "disposition",
+      "preAuthRef": "preAuthRef",
+      "preAuthPeriod": "preAuthPeriod",
+      "payeeType": {
+        "coding": {
+          "*": {
+            "@(2,text)": "payeeType.[&1].payeeTypeText",
+            "system": "payeeType.[&1].payeeTypeCodingSystem",
+            "code": "payeeType.[&1].payeeTypeCodingCode",
+            "display": "payeeType.[&1].payeeTypeCodingDisplay"
+          }
+        }
+      },
+      "total": {
+        "*": {
+          "category": {
+            "coding": {
+              "*": {
+                "@(2,text)": "totalCategory.[&1].totalCategorytext",
+                "system": "totalCategory.[&1].totalCategoryCodingSystem",
+                "code": "totalCategory.[&1].totalCategoryCodingCode",
+                "display": "totalCategory.[&1].totalCategoryCodingDisplay"
+              }
+            }
+          },
+          "amount": {
+            "value": "totalAmountValue",
+            "currency": "totalAmountCurrency"
+          }
+        }
+      },
+      "payment": {
+        "type": {
+          "coding": {
+            "*": {
+              "@(2,text)": "paymentType.[&1].paymentTypeText",
+              "system": "paymentType.[&1].paymentTypeCodingSystem",
+              "code": "paymentType.[&1].paymentTypeCodingCode",
+              "display": "paymentType.[&1].paymentTypeCodingDisplay"
+            }
+          }
+        },
+        "adjustment": {
+          "value": "paymentAdjustmentValue",
+          "currency": "paymentAdjustmentCurrency"
+        },
+        "adjustmentReason": {
+          "coding": {
+            "*": {
+              "@(2,text)": "paymentAdjustmentReason.[&1].paymentAdjustmentReasonText",
+              "system": "paymentAdjustmentReason.[&1].paymentAdjustmentReasonCodingSystem",
+              "code": "paymentAdjustmentReason.[&1].paymentAdjustmentReasonCodingCode",
+              "display": "paymentAdjustmentReason.[&1].paymentAdjustmentReasonCodingDisplay"
+            }
+          }
+        },
+        "date": "paymentDate",
+        "amount": {
+          "value": "paymentAmountValue",
+          "currency": "paymentAmountCurrency"
+        },
+        "identifier": {
+          "system": "paymentIdentifierSystem",
+          "value": "paymentIdentifierValue"
+        }
+      },
+      "fundsReserve": {
+        "coding": {
+          "*": {
+            "@(2,text)": "fundsReserve.[&1].fundsReserveText",
+            "system": "fundsReserve.[&1].fundsReserveCodingSystem",
+            "code": "fundsReserve.[&1].fundsReserveCodingCode",
+            "display": "fundsReserve.[&1].fundsReserveCodingDisplay"
+          }
+        }
+      },
+      "formCode": {
+        "coding": {
+          "*": {
+            "@(2,text)": "formCode.[&1].formCodeText",
+            "system": "formCode.[&1].formCodeCodingSystem",
+            "code": "formCode.[&1].formCodeCodingCode",
+            "display": "formCode.[&1].formCodeCodingDisplay"
+          }
+        }
+      },
+      "form": "form",
+      "processNote": {
+        "*": {
+          "number": "processNoteNumber",
+          "type": "processNoteType",
+          "text": "processNoteText",
+          "language": {
+            "coding": {
+              "*": {
+                "@(2,text)": "processNoteLanguage.[&1].processNoteLanguageText",
+                "system": "processNoteLanguage.[&1].processNoteLanguageCodingSystem",
+                "code": "processNoteLanguage.[&1].processNoteLanguageCodingCode",
+                "display": "processNoteLanguage.[&1].processNoteLanguageCodingDisplay"
+              }
+            }
+          }
+        }
+      },
+      "communicationRequest": {
+        "*": {
+          "reference": "CommunicationRequest[&1].communicationRequestReference",
+          "display": "CommunicationRequest.[&1].communicationRequestDisplay",
+          "type": "CommunicationRequest.[&1].communicationRequestType",
+          "identifier": {
+            "use": "CommunicationRequest.[&2].communicationRequestIdentifierUse",
+            "code": "CommunicationRequest.[&2].communicationRequestIdentifierCode",
+            "system": "CommunicationRequest.[&2].communicationRequestIdentifierSystem",
+            "value": "CommunicationRequest.[&2].communicationRequestIdentifierValue"
+          }
+        }
+      },
+      "insurance": {
+        "*": {
+          "sequence": "insuranceSequence",
+          "focal": "insuranceFocal",
+          "coverage": {
+            "reference": "insuranceCoverageReference"
+          }
+        }
+      },
+      "error": {
+        "*": {
+          "itemSequence": "errorItemSequence",
+          "detailSequence": "errorDetailSequence",
+          "code": {
+            "coding": {
+              "*": {
+                "@(2,text)": "errorCode.[&1].errorCodeText",
+                "system": "errorCode.[&1].errorCodeCodingSystem",
+                "code": "errorCode.[&1].errorCodeCodingCode",
+                "display": "errorCode.[&1].errorCodeCodingDisplay"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+]

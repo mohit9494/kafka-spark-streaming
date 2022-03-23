@@ -1,0 +1,174 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "Identifier.[&1].identifierCode",
+          "system": "Identifier.[&1].identifierSystem",
+          "value": "Identifier.[&1].identifierValue"
+        }
+      },
+      "clinicalStatus": {
+        "coding": {
+          "*": {
+            "@(2,text)": "ClinicalStatus.[&1].clinicalStatusText",
+            "system": "ClinicalStatus.[&1].clinicalStatusSystem",
+            "code": "ClinicalStatus.[&1].clinicalStatusCode",
+            "display": "ClinicalStatus.[&1].clinicalStatusDisplay"
+          }
+        }
+      },
+      "verificationStatus": {
+        "coding": {
+          "*": {
+            "@(2,text)": "VerificationStatus.[&1].verificationStatusText",
+            "system": "VerificationStatus.[&1].verificationStatusSystem",
+            "code": "VerificationStatus.[&1].verificationStatusCode",
+            "display": "VerificationStatus.[&1].verificationStatusDisplay"
+          }
+        }
+      },
+      "category": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(2,text)": "Category.[&1].categoryText",
+              "code": "Category.[&1].categoryCodingCode",
+              "display": "Category.[&1].categoryCodingDisplay",
+              "system": "Category.[&1].categoryCodingSystem",
+              "value": "Category.[&1].categoryCodingValue"
+            }
+          }
+        }
+      },
+      "severity": {
+        "coding": {
+          "*": {
+            "@(2,text)": "Severity.[&1].severityText",
+            "system": "Severity.[&1].severityCodingSystem",
+            "code": "Severity.[&1].severityCodingCode",
+            "display": "Severity.[&1].severityCodingDisplay"
+          }
+        }
+      },
+      "code": {
+        "coding": {
+          "*": {
+            "@(2,text)": "Code.[&1].codeText",
+            "system": "Code.[&1].codeCodingSystem",
+            "code": "Code.[&1].codeCodingCode",
+            "display": "Code.[&1].codeCodingDisplay"
+          }
+        }
+      },
+      "bodySite": {
+        "*": {
+          "coding": {
+            "*": {
+              "@(2,text)": "BodySite.[&1].bodySiteText",
+              "system": "BodySite.[&1].bodySiteCodingSystem",
+              "code": "BodySite.[&1].bodySiteCodingCode",
+              "display": "BodySite.[&1].bodySiteCodingDisplay"
+            }
+          }
+        }
+      },
+      "subject": {
+        "reference": "subjectReference",
+        "type": "subjectType",
+        "display": "subjectDisplayName",
+        "identifier": {
+          "code": "subjectIdentifierCode",
+          "system": "subjectIdentifierSystem",
+          "value": "subjectIdentifierValue"
+        }
+      },
+      "encounter": {
+        "reference": "encounterReference",
+        "type": "encounterType",
+        "display": "encounterDisplay",
+        "identifier": {
+          "code": "encounterIdentifierCode",
+          "system": "encounterIdentifierSystem",
+          "value": "encounterIdentifierValue"
+        }
+      },
+      "onsetDateTime": "onsetDateTime",
+      "onsetAge": {
+        "value": "onsetAgeValue",
+        "unit": "onsetAgeUnit",
+        "system": "onsetAgeSystem",
+        "code": "onsetAgeCode"
+      },
+      "onsetPeriod": {
+        "start": "onsetPeriodStart",
+        "end": "onsetPeriodEnd"
+      },
+      "onsetRange": {
+        "value": "onsetRangeValue",
+        "unit": "onsetRangeUnit",
+        "system": "onsetRangeSystem",
+        "code": "onsetRangeCode"
+      },
+      "onsetString": "onsetString",
+      "abatementDateTime": "abatementDateTime",
+      "abatementAge": {
+        "value": "abatementAgeValue",
+        "unit": "abatementAgeUnit",
+        "system": "abatementAgeSystem",
+        "code": "abatementAgeCode"
+      },
+      "abatementPeriod": {
+        "start": "abatementPeriodStart",
+        "end": "abatementPeriodEnd"
+      },
+      "abatementRange": {
+        "value": "abatementRangeValue",
+        "unit": "abatementRangeUnit",
+        "system": "abatementRangeSystem",
+        "code": "abatementRangeCode"
+      },
+      "abatementString": "abatementString",
+      "recordedDate": "recordedDate",
+      "recorder": {
+        "reference": "recorderReference",
+        "type": "recorderType",
+        "display": "recorderDisplayName",
+        "identifier": {
+          "code": "recorderIdentifierCode",
+          "system": "recorderIdentifierSystem",
+          "value": "recorderIdentifierValue"
+        }
+      },
+      "asserter": {
+        "reference": "asserterReference",
+        "type": "asserterType",
+        "display": "asserterDisplayName",
+        "identifier": {
+          "code": "asserterIdentifierCode",
+          "system": "asserterIdentifierSystem",
+          "value": "asserterIdentifierValue"
+        }
+      },
+      "note": {
+        "*": {
+          "time": "Notes.[&1].noteTime",
+          "text": "Notes.[&1].noteText",
+          "authorString": "Notes.[&1].noteAuthorString",
+          "authorReference": {
+            "reference": "Notes.[&2].noteAuthorReferenceReference",
+            "display": "Notes.[&2].noteAuthorReferenceDisplay",
+            "type": "Notes.[&2].noteAuthorReferenceType",
+            "identifier": {
+              "system": "Notes.[&3].noteAuthorReferenceIdentifierSystem",
+              "value": "Notes.[&3].noteAuthorReferenceIdentifierValue"
+            }
+          }
+        }
+      }
+    }
+  }
+]

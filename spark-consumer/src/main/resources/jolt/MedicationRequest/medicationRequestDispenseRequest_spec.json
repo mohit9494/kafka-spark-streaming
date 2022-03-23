@@ -1,0 +1,79 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "resourceType": "resourceType",
+      "id": "id",
+      "identifier": {
+        "*": {
+          "code": "identifier.[&1].identifierCode",
+          "system": "identifier.[&1].identifierSystem",
+          "value": "identifier.[&1].identifierValue"
+        }
+      },
+      "dispenseRequest": {
+        "initialFill": {
+          "quantity": {
+            "value": "initialQuantity",
+            "unit": "initialQuantityUnit",
+            "system": "initialSystem",
+            "code": "initialCode"
+          },
+          "duration": {
+            "value": "duration",
+            "unit": "unit",
+            "system": "durationSystem",
+            "code": "durationCode"
+          }
+        },
+        "dispenseInterval": {
+          "value": "dispenseInterval",
+          "unit": "dispenseIntervalUnit",
+          "system": "dispenseIntervalSystem",
+          "code": "dispenseIntervalCode"
+        },
+        "validityPeriod": {
+          "start": "validityStart",
+          "end": "validityEnd"
+        },
+        "numberOfRepeatsAllowed": "numberOfRepeatsAllowed",
+        "quantity": {
+          "value": "quantityValue",
+          "unit": "quantityUnit",
+          "system": "quantitySystem",
+          "code": "quantityCode"
+        },
+        "expectedSupplyDuration": {
+          "value": "expectedSupplyDuration",
+          "unit": "expectedSupplyUnit",
+          "system": "expectedSupplySystem",
+          "code": "expectedSupplyCode"
+        },
+        "performer": {
+          "reference": "organizationReference",
+          "type": "organizationType",
+          "identifier": {
+            "*": {
+              "system": "organizationIdentifierSystem",
+              "value": "organizationIdentifierValue"
+            }
+          },
+          "display": "organizationDisplay"
+        }
+      },
+      "substitution": {
+        "allowedBoolean": "substitutionAllowed",
+        "reason": {
+          "coding": {
+            "*": {
+              "system": "substitutionReason.[&1].substitutionCodingSystem",
+              "code": "substitutionReason.[&1].substitutionCode",
+              "display": "substitutionReason.[&1].substitutionReason"
+            }
+          }
+        }
+      }
+    }
+  }
+
+]
